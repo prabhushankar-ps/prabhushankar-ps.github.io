@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prabhu Shankar · Data Engineer</title>
+  <meta name="description" content="Data Engineer specializing in AWS, Snowflake, dbt, and analytics engineering." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    .tag{display:inline-block;padding:.2rem .5rem;border-radius:999px;background:#eee;margin-right:.3rem}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    header,main,footer{max-width:960px;margin:auto;padding:1rem}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Prabhu Shankar</h1>
+  <p>Data Engineer · AWS | Snowflake | Python | SQL | dbt</p>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="resume.pdf">Resume</a>
+  </nav>
+</header>
+
+<main>
+<section id="about">
+  <h2>About</h2>
+  <p>I build reliable, cost-efficient data platforms—cutting ETL latency, automating ERP → cloud flows, and driving analytics adoption.</p>
+  <div>
+    <span class="tag">AWS</span><span class="tag">Snowflake</span><span class="tag">Airflow</span>
+    <span class="tag">dbt</span><span class="tag">Redshift</span><span class="tag">Tableau</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Selected Projects</h2>
+  <div class="grid">
+    <article>
+      <h3><a href="https://github.com/yourname/oracle-erp-to-redshift">Oracle ERP → Redshift pipeline</a></h3>
+      <p>Automated ERP data mapping into Redshift; reduced reconciliation effort by 35% and saved $100k/year.</p>
+      <small>Python · AWS Lambda · Redshift · Airbyte · SQL</small>
+    </article>
+    <article>
+      <h3><a href="https://github.com/yourname/cfpb-complaints-ml">CFPB Complaints ML</a></h3>
+      <p>Modeled complaint categories on 6.1M rows; built feature store and evaluation dashboard.</p>
+      <small>Pandas · scikit-learn · dbt · DuckDB</small>
+    </article>
+    <article>
+      <h3><a href="https://github.com/yourname/healthcare-etl">Healthcare ETL & KPIs</a></h3>
+      <p>Star-schema warehouse + KPI API for payer/provider analytics; 30% faster reporting.</p>
+      <small>Snowflake · dbt · FastAPI · Power BI</small>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Impact</h2>
+  <ul>
+    <li>Saved $250k annually via batch processing on AWS & Snowflake.</li>
+    <li>Cut ETL latency by 45 mins/day for $2B AUM pipelines.</li>
+    <li>Raised reporting accuracy by 30% with AI anomaly detection.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><a href="mailto:you@email.com">you@email.com</a> · 
+     <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> · 
+     <a href="https://github.com/your-username">GitHub</a></p>
+</section>
+</main>
+
+<footer><small>© <span id="y"></span> Prabhu Shankar</small></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
