@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile — Portfolio</title>
+  <style>
+    :root{--bg:#0b0b0b; --text:#e7e7e7; --muted:#9b9b9b; --accent:#e50914}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,#050505,#0b0b0b);color:var(--text)}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:8px;background:#222;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .profile-name{font-size:18px}
+    .secondary{color:var(--muted);font-size:13px}
+    .nav{display:flex;gap:12px;align-items:center}
+    .nav a{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px}
+    .nav a.active{background:rgba(255,255,255,0.03)}
+    .container{padding:28px;max-width:1100px;margin:0 auto}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));padding:18px;border-radius:12px}
+    .project{margin-bottom:12px}
+    .switch{background:none;border:0;color:var(--accent);cursor:pointer;font-weight:700}
+    @media (max-width:880px){ .grid{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start;gap:12px} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="avatar" id="header-avatar">DE</div>
+      <div>
+        <div class="profile-name" id="header-name">Profile</div>
+        <div class="secondary" id="header-sub">Expertise</div>
+      </div>
+    </div>
+    <div class="nav">
+      <a href="#" data-tab="overview" class="active">Overview</a>
+      <a href="#" data-tab="projects">Projects</a>
+      <a href="#" data-tab="contact">Contact</a>
+      <button class="switch" id="switch-profile">Switch profile</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section id="main-area">
+        <div class="card" id="tab-content">
+          <!-- content populated by JS -->
+        </div>
+      </section>
+
+      <aside>
+        <div class="card" id="quick-info">
+          <h3>Quick Links</h3>
+          <ul id="links-list"></ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Skills</h3>
+          <div id="skills"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+<script>
+  // Profiles data model (should match keys used in index.html)
+  const profileDefaults = {
+    "data-eng": {
+      id:"data-eng", name:"Data Engineering", subtitle:"ETL, Cloud, Warehousing", avatar:"DE",
+      overview: "<p>Experienced in building cloud-native ETL, Snowflake & Redshift warehouses, Airflow orchestration and AWS-based pipelines. Focused on scale, cost-efficiency and data quality.</p>",
+      projects: [
+        {title:"Oracle ERP → Redshift", desc:"Automated ERP extraction, mapping and loading to Redshift, reducing reconciliation effort by 35%." , link:"#"},
+        {title:"$2B AUM pipeline", desc:"Reduced ETL latency by 45 minutes/day with caching and optimized EL/ELT.", link:"#"}
+      ],
+      skills:["AWS","Snowflake","dbt","Airflow","SQL","Python"]
+    },
+    "ml":{
+      id:"ml", name:"Machine Learning", subtitle:"Models & MLOps", avatar:"ML",
+      overview: "<p>Built and productionized predictive models (classification & time-series), MLOps pipelines and monitoring. Familiar with scikit-learn, TensorFlow, model explainability and feature stores.</p>",
+      projects:[
+        {title:"CFPB Complaints Classifier", desc:"6.1M row dataset model achieving high recall for priority labels.", link:"#"},
+        {title:"MLOps Pipeline", desc:"Automated model training & deployment using Docker, CI and scheduled retraining.", link:"#"}
+      ],
+      skills:["scikit-learn","TensorFlow","Docker","MLflow","Python"]
+    },
+    "analytics":{
+      id:"analytics", name:"Product Analytics", subtitle:"Dashboards & SQL", avatar:"PA",
+      overview: "<p>Designs BI stacks and dashboards that drive product decisions. Strong SQL, experimentation, and visualization skills.</p>",
+      projects:[
+        {title:"KPI Forecast Dashboard", desc:"Forecasting KPIs and embedding AI-driven recommendations in dashboards.", link:"#"},
+        {title:"User Cohort Analysis", desc:"Behavioral segmentation and retention modeling using SQL & Python.", link:"#"}
+      ],
+      skills:["SQL","Tableau","Power BI","A/B testing","Python"]
+    }
+  };
+
+  // read chosen profile from localStorage; fallback to first profile
+  let chosen = JSON.parse(localStorage.getItem('chosenProfile') || 'null');
+
+  if(!chosen){
+    // If user opened profiles.html directly without a chosen profile, redirect to chooser (or show chooser inline)
+    // We'll redirect to index.html (chooser) to pick
+    location.href = 'index.html';
+  } else {
+    // If chosen is a plain object with id & name (from index.html), merge with defaults for content
+    const id = chosen.id;
+    const data = profileDefaults[id] ? {...profileDefaults[id], ...chosen} : chosen;
+
+    // populate header
+    document.getElementById('header-avatar').textContent = data.avatar || data.name.slice(0,2).toUpperCase();
+    document.getElementById('header-name').textContent = data.name;
+    document.getElementById('header-sub').textContent = data.subtitle || '';
+
+    // Tab logic
+    const tabs = document.querySelectorAll('.nav a');
+    const content = document.getElementById('tab-content');
+    function renderTab(name){
+      tabs.forEach(t=> t.classList.toggle('active', t.dataset.tab===name));
+      if(name==='overview'){
+        content.innerHTML = `<h2>About ${data.name}</h2>${data.overview || '<p>No overview.</p>'}`;
+      } else if(name==='projects'){
+        content.innerHTML = `<h2>Highlighted projects</h2>` + data.projects.map(p=>`<div class="project"><h4>${p.title}</h4><p>${p.desc}</p><p><a href="${p.link}" target="_blank">View repo / details →</a></p></div>`).join('');
+      } else if(name==='contact'){
+        content.innerHTML = `<h2>Contact</h2><p>Email: <a href="mailto:you@email.com">you@email.com</a></p>
+          <p>LinkedIn: <a href="#" target="_blank">your profile</a></p>`;
+      }
+    }
+    // default tab
+    renderTab('overview');
+    tabs.forEach(t=>{
+      t.addEventListener('click',(e)=>{
+        e.preventDefault(); renderTab(t.dataset.tab);
+      });
+    });
+
+    // quick links & skills
+    document.getElementById('links-list').innerHTML = (data.projects||[]).slice(0,3).map(p=>`<li><a href="${p.link}" target="_blank">${p.title}</a></li>`).join('') || '<li>No links</li>';
+    document.getElementById('skills').innerHTML = (data.skills||[]).map(s=>`<div style="display:inline-block;margin:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:999px;font-size:13px">${s}</div>`).join('');
+
+    // switch profile button
+    document.getElementById('switch-profile').addEventListener('click', ()=>{
+      // clear selection and go back to chooser
+      localStorage.removeItem('chosenProfile');
+      location.href = 'index.html';
+    });
+  }
+</script>
+</body>
+</html>
