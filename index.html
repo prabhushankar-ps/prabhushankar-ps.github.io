@@ -2,77 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prabhu Shankar · Data Engineer</title>
-  <meta name="description" content="Data Engineer specializing in AWS, Snowflake, dbt, and analytics engineering." />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Portfolio — Choose Profile</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <style>
-    .tag{display:inline-block;padding:.2rem .5rem;border-radius:999px;background:#eee;margin-right:.3rem}
-    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    header,main,footer{max-width:960px;margin:auto;padding:1rem}
+    :root{
+      --bg:#141414; --card:#222; --accent:#e50914; --text:#e6e6e6;
+      --glass: rgba(255,255,255,0.04);
+      --card-radius:12px;
+    }
+    *{box-sizing:border-box}
+    body,html{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:
+      linear-gradient(180deg,#0b0b0b 0%, #0f0f0f 45%, #0b0b0b 100%);}
+    .hero{
+      min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;
+      background-image: radial-gradient(ellipse at 20% 10%, rgba(255,0,0,0.04), transparent 10%),
+                        radial-gradient(ellipse at 80% 90%, rgba(0,0,255,0.02), transparent 20%);
+    }
+    h1{font-size:32px;margin:0 0 16px;text-align:center;letter-spacing:0.5px}
+    p.lead{max-width:760px;text-align:center;color:#cfcfcf;margin:0 0 32px}
+    .chooser{display:flex;gap:28px;align-items:flex-end;flex-wrap:wrap;justify-content:center}
+    .profile{
+      width:150px;text-align:center;cursor:pointer;border-radius:12px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+      transition:transform .22s ease, box-shadow .22s ease;box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      outline: none; border: 2px solid transparent;
+    }
+    .profile:focus, .profile:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.7);border-color:rgba(255,255,255,0.06)}
+    .avatar{
+      width:120px;height:120px;border-radius:8px;overflow:hidden;margin:0 auto 10px;background:var(--glass);
+      display:flex;align-items:center;justify-content:center;font-weight:600;font-size:28px;color:#fff;
+    }
+    .name{font-weight:600;margin-bottom:6px}
+    .role{color:#9f9f9f;font-size:13px;margin-bottom:6px}
+    .cta{display:block;margin-top:24px;background:var(--accent);padding:10px 18px;border-radius:8px;color:white;text-decoration:none;font-weight:600}
+    .small{font-size:13px;color:#9f9f9f;margin-top:12px}
+    footer{position:fixed;left:12px;bottom:12px;color:#666;font-size:12px}
+    /* Responsive */
+    @media (max-width:520px){
+      .profile{width:120px}
+      .avatar{width:96px;height:96px}
+    }
   </style>
 </head>
 <body>
-<header>
-  <h1>Prabhu Shankar</h1>
-  <p>Data Engineer · AWS | Snowflake | Python | SQL | dbt</p>
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-    <a href="resume.pdf">Resume</a>
-  </nav>
-</header>
+  <main class="hero" role="main">
+    <h1>Choose a profile</h1>
+    <p class="lead">Select a profile to view curated projects and pages for each area of expertise.</p>
 
-<main>
-<section id="about">
-  <h2>About</h2>
-  <p>I build reliable, cost-efficient data platforms—cutting ETL latency, automating ERP → cloud flows, and driving analytics adoption.</p>
-  <div>
-    <span class="tag">AWS</span><span class="tag">Snowflake</span><span class="tag">Airflow</span>
-    <span class="tag">dbt</span><span class="tag">Redshift</span><span class="tag">Tableau</span>
-  </div>
-</section>
+    <div class="chooser" aria-label="Profile chooser">
+      <!-- Profiles are data-driven below -->
+      <div class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"data-eng","name":"Data Engineering","subtitle":"ETL, Cloud, Warehousing","avatar":"DE"}'>
+        <div class="avatar" aria-hidden="true" style="background:linear-gradient(180deg,#222,#181818)">
+          DE
+        </div>
+        <div class="name">Data Engineering</div>
+        <div class="role">ETL · AWS · Snowflake</div>
+      </div>
 
-<section id="projects">
-  <h2>Selected Projects</h2>
-  <div class="grid">
-    <article>
-      <h3><a href="https://github.com/yourname/oracle-erp-to-redshift">Oracle ERP → Redshift pipeline</a></h3>
-      <p>Automated ERP data mapping into Redshift; reduced reconciliation effort by 35% and saved $100k/year.</p>
-      <small>Python · AWS Lambda · Redshift · Airbyte · SQL</small>
-    </article>
-    <article>
-      <h3><a href="https://github.com/yourname/cfpb-complaints-ml">CFPB Complaints ML</a></h3>
-      <p>Modeled complaint categories on 6.1M rows; built feature store and evaluation dashboard.</p>
-      <small>Pandas · scikit-learn · dbt · DuckDB</small>
-    </article>
-    <article>
-      <h3><a href="https://github.com/yourname/healthcare-etl">Healthcare ETL & KPIs</a></h3>
-      <p>Star-schema warehouse + KPI API for payer/provider analytics; 30% faster reporting.</p>
-      <small>Snowflake · dbt · FastAPI · Power BI</small>
-    </article>
-  </div>
-</section>
+      <div class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"ml","name":"Machine Learning","subtitle":"Models & MLOps","avatar":"ML"}'>
+        <div class="avatar" style="background:linear-gradient(180deg,#2b2b3b,#111)">
+          ML
+        </div>
+        <div class="name">Machine Learning</div>
+        <div class="role">Modeling · scikit-learn · TensorFlow</div>
+      </div>
 
-<section id="experience">
-  <h2>Impact</h2>
-  <ul>
-    <li>Saved $250k annually via batch processing on AWS & Snowflake.</li>
-    <li>Cut ETL latency by 45 mins/day for $2B AUM pipelines.</li>
-    <li>Raised reporting accuracy by 30% with AI anomaly detection.</li>
-  </ul>
-</section>
+      <div class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"analytics","name":"Product Analytics","subtitle":"Dashboards & SQL","avatar":"PA"}'>
+        <div class="avatar" style="background:linear-gradient(180deg,#1b2b1b,#081)">
+          PA
+        </div>
+        <div class="name">Product Analytics</div>
+        <div class="role">SQL · BI · Experimentation</div>
+      </div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p><a href="mailto:prabhushankargv@email.com">prabhushankargv@email.com</a> · 
-     <a href="https://www.linkedin.com/in/shankarprabhu">LinkedIn</a> · 
-     <a href="https://github.com/prabhushankar-ps">GitHub</a></p>
-</section>
-</main>
+      <!-- Add more profile cards as needed -->
+    </div>
 
-<footer><small>© <span id="y"></span> Prabhu Shankar</small></footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    <a class="cta" id="open-last" href="#" style="display:none">Open last profile</a>
+    <div class="small">Tip: press <kbd>Enter</kbd> to open, <kbd>←/→</kbd> to move</div>
+  </main>
+
+  <footer>Built with ❤️ — Replace avatars with your images to brand it</footer>
+
+<script>
+  // Click / keyboard behavior
+  const cards = Array.from(document.querySelectorAll('.profile'));
+  const openLastBtn = document.getElementById('open-last');
+
+  function goToProfile(profile){
+    // save selection (localStorage) and redirect to profiles.html
+    localStorage.setItem('chosenProfile', JSON.stringify(profile));
+    // navigate to the SPA page
+    location.href = 'profiles.html';
+  }
+
+  cards.forEach(c=>{
+    c.addEventListener('click', ()=> goToProfile(JSON.parse(c.dataset.profile)));
+    c.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); goToProfile(JSON.parse(c.dataset.profile)); }
+      if(e.key === 'ArrowRight'){
+        const idx = cards.indexOf(c); const next = cards[(idx+1)%cards.length]; next.focus();
+      }
+      if(e.key === 'ArrowLeft'){
+        const idx = cards.indexOf(c); const prev = cards[(idx-1+cards.length)%cards.length]; prev.focus();
+      }
+    });
+  });
+
+  // show "open last" if chosenProfile exists
+  const last = localStorage.getItem('chosenProfile');
+  if(last){
+    const p = JSON.parse(last);
+    openLastBtn.style.display = 'inline-block';
+    openLastBtn.textContent = `Open ${p.name}`;
+    openLastBtn.onclick = (e)=>{ e.preventDefault(); location.href='profiles.html'; };
+  }
+
+  // If user clicks the root domain directly (you requested "directly open a profile chooser"),
+  // this file is already the chooser. If you want the site's root to redirect to this file automatically,
+  // make this file be the repo's index.html (done).
+</script>
 </body>
 </html>
