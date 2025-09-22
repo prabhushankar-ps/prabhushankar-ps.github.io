@@ -2,97 +2,201 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Portfolio — Choose Profile</title>
+  <meta name="description" content="Choose a profile to view curated projects across Data Engineering, Machine Learning, and Product Analytics." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#141414; --card:#222; --accent:#e50914; --text:#e6e6e6;
+      --bg:#0b0b0b;
+      --bg2:#111;
+      --card:#171717;
+      --accent:#e50914;
+      --text:#e8e8e8;
+      --muted:#a3a3a3;
       --glass: rgba(255,255,255,0.04);
-      --card-radius:12px;
+      --ring: rgba(255,255,255,0.12);
+      --card-radius:16px;
+      --shadow-1: 0 8px 28px rgba(0,0,0,.45);
+      --shadow-2: 0 18px 60px rgba(0,0,0,.55);
+    }
+    [data-theme="light"]{
+      --bg:#f7f7f7; --bg2:#fff; --card:#fff; --text:#101010; --muted:#5a5a5a; --glass:rgba(0,0,0,0.04); --ring: rgba(0,0,0,.12);
     }
     *{box-sizing:border-box}
-    body,html{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:
-      linear-gradient(180deg,#0b0b0b 0%, #0f0f0f 45%, #0b0b0b 100%);}
-    .hero{
-      min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;
-      background-image: radial-gradient(ellipse at 20% 10%, rgba(255,0,0,0.04), transparent 10%),
-                        radial-gradient(ellipse at 80% 90%, rgba(0,0,255,0.02), transparent 20%);
+    html,body{height:100%;}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:
+      radial-gradient(1200px 600px at 10% 0%, rgba(229,9,20,.06), transparent 60%),
+      radial-gradient(1200px 600px at 90% 100%, rgba(80,120,255,.06), transparent 60%),
+      linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+      position:relative;overflow-x:hidden}
+
+    /* Subtle grain for depth */
+    body:before{content:"";position:fixed;inset:0;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.04"/></svg>');pointer-events:none;mix-blend-mode:overlay}
+
+    .container{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px}
+
+    header{position:fixed;top:12px;left:12px;right:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:2}
+
+    .brand{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:9999px;background:var(--glass);backdrop-filter: blur(10px);border:1px solid var(--ring)}
+    .brand .dot{width:10px;height:10px;border-radius:9999px;background:var(--accent);box-shadow:0 0 0 4px rgba(229,9,20,.15)}
+    .brand span{font-weight:600;letter-spacing:.2px}
+
+    .actions{display:flex;align-items:center;gap:8px}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:9999px;background:var(--glass);border:1px solid var(--ring);font-size:13px}
+    .chip kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;font-size:12px;padding:0 6px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid var(--ring)}
+
+    .toggle{border:none;background:var(--glass);border:1px solid var(--ring);padding:8px 12px;border-radius:9999px;color:inherit;cursor:pointer}
+
+    main.hero{width:100%;max-width:1100px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+    h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0;letter-spacing:.3px}
+    p.lead{max-width:780px;color:var(--muted);margin:0 0 10px}
+
+    .chooser{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:10px;width:100%}
+
+    @media (max-width:960px){.chooser{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:540px){.chooser{grid-template-columns:1fr}}
+
+    .profile{position:relative;isolation:isolate;border-radius:var(--card-radius);padding:18px;background:
+      linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.02));
+      border:1px solid var(--ring);
+      box-shadow: var(--shadow-1);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      cursor:pointer; outline: none; display:flex;flex-direction:column;align-items:center;text-align:center;min-height:228px
     }
-    h1{font-size:32px;margin:0 0 16px;text-align:center;letter-spacing:0.5px}
-    p.lead{max-width:760px;text-align:center;color:#cfcfcf;margin:0 0 32px}
-    .chooser{display:flex;gap:28px;align-items:flex-end;flex-wrap:wrap;justify-content:center}
-    .profile{
-      width:150px;text-align:center;cursor:pointer;border-radius:12px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
-      transition:transform .22s ease, box-shadow .22s ease;box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      outline: none; border: 2px solid transparent;
-    }
-    .profile:focus, .profile:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.7);border-color:rgba(255,255,255,0.06)}
-    .avatar{
-      width:120px;height:120px;border-radius:8px;overflow:hidden;margin:0 auto 10px;background:var(--glass);
-      display:flex;align-items:center;justify-content:center;font-weight:600;font-size:28px;color:#fff;
-    }
-    .name{font-weight:600;margin-bottom:6px}
-    .role{color:#9f9f9f;font-size:13px;margin-bottom:6px}
-    .cta{display:block;margin-top:24px;background:var(--accent);padding:10px 18px;border-radius:8px;color:white;text-decoration:none;font-weight:600}
-    .small{font-size:13px;color:#9f9f9f;margin-top:12px}
-    footer{position:fixed;left:12px;bottom:12px;color:#666;font-size:12px}
-    /* Responsive */
-    @media (max-width:520px){
-      .profile{width:120px}
-      .avatar{width:96px;height:96px}
+    .profile:after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(100px 60px at 20% 0%, rgba(229,9,20,.10), transparent 60%), radial-gradient(120px 80px at 90% 100%, rgba(120,160,255,.10), transparent 60%);opacity:.0;transition:opacity .3s ease;z-index:-1}
+    .profile:hover,.profile:focus{transform:translateY(-6px) perspective(800px) rotateX(1deg);box-shadow: var(--shadow-2)}
+    .profile:hover:after,.profile:focus:after{opacity:1}
+    .profile:focus-visible{box-shadow:0 0 0 3px rgba(229,9,20,.45), var(--shadow-2)}
+
+    .avatar{width:112px;height:112px;border-radius:14px;overflow:hidden;margin:6px auto 14px;background:var(--glass);display:grid;place-items:center;font-weight:700;font-size:28px;border:1px solid var(--ring)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .name{font-weight:700;letter-spacing:.2px;margin-bottom:6px}
+    .role{color:var(--muted);font-size:14px;margin-bottom:10px}
+
+    .meta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .pill{font-size:12px;border:1px solid var(--ring);background:var(--glass);padding:6px 10px;border-radius:9999px}
+
+    .cta{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--accent);padding:12px 18px;border-radius:12px;color:white;text-decoration:none;font-weight:700;letter-spacing:.2px;box-shadow:0 10px 30px rgba(229,9,20,.35);transform: translateZ(0)}
+    .cta svg{width:18px;height:18px}
+
+    .helper{font-size:13px;color:var(--muted);margin-top:8px}
+    footer{position:fixed;left:14px;bottom:12px;color:var(--muted);font-size:12px;backdrop-filter: blur(8px)}
+
+    /* Motion preferences */
+    @media (prefers-reduced-motion: reduce){
+      .profile{transition:none}
+      .profile:hover,.profile:focus{transform:none}
+      .cta{transition:none}
     }
   </style>
 </head>
 <body>
-  <main class="hero" role="main">
-    <h1>Choose a profile</h1>
-    <p class="lead">Select a profile to view curated projects and pages for each area of expertise.</p>
-
-    <div class="chooser" aria-label="Profile chooser">
-      <!-- Profiles are data-driven below -->
-      <div class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"data-eng","name":"Data Engineering","subtitle":"ETL, Cloud, Warehousing","avatar":"DE"}'>
-        <div class="avatar">
-          <img src="assets/1686821429566.jpeg" alt="Data Engineering profile photo">
-        </div>
-        <div class="name">Data Engineering</div>
-        <div class="role">ETL · AWS · Snowflake</div>
+  <div class="container" role="application" aria-label="Profile chooser app">
+    <header>
+      <div class="brand" aria-label="Brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Portfolio</span>
       </div>
-
-      <div class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"ml","name":"Machine Learning","subtitle":"Models & MLOps","avatar":"ML"}'>
-        <div class="avatar">
-          <img src="assets/ML.jpeg" alt="Data Engineering profile photo">
-        </div>
-        <div class="name">Machine Learning</div>
-        <div class="role">Modeling · scikit-learn · TensorFlow</div>
+      <div class="actions">
+        <div class="chip" title="Keyboard tips"><span>Tips</span><kbd>Enter</kbd><span>open</span><kbd>←/→</kbd><span>move</span></div>
+        <button class="toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle light/dark theme">🌗 Theme</button>
       </div>
+    </header>
 
-      <div class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"analytics","name":"Product Analytics","subtitle":"Dashboards & SQL","avatar":"PA"}'>
-        <div class="avatar">
-          <img src="assets/PA.jpeg" alt="Data Engineering profile photo">
-        </div>
-        <div class="name">Product Analytics</div>
-        <div class="role">SQL · BI · Experimentation</div>
-      </div>
+    <main class="hero" role="main">
+      <h1>Choose a profile</h1>
+      <p class="lead">Select a profile to view curated projects and pages for each area of expertise.</p>
 
-      <!-- Add more profile cards as needed -->
-    </div>
+      <section class="chooser" aria-label="Profile chooser" id="chooser">
+        <!-- Data Engineering -->
+        <article class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"data-eng","name":"Data Engineering","subtitle":"ETL, Cloud, Warehousing","avatar":"DE"}'>
+          <figure class="avatar" aria-label="Data Engineering avatar">
+            <img src="assets/1686821429566.jpeg" alt="Data Engineering profile photo" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          </figure>
+          <div class="name">Data Engineering</div>
+          <div class="role">ETL · AWS · Snowflake</div>
+          <div class="meta">
+            <span class="pill">Pipelines</span>
+            <span class="pill">dbt</span>
+            <span class="pill">Airflow</span>
+          </div>
+        </article>
 
-    <a class="cta" id="open-last" href="#" style="display:none">Open last profile</a>
-    <div class="small">Tip: press <kbd>Enter</kbd> to open, <kbd>←/→</kbd> to move</div>
-  </main>
+        <!-- Machine Learning -->
+        <article class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"ml","name":"Machine Learning","subtitle":"Models & MLOps","avatar":"ML"}'>
+          <figure class="avatar" aria-label="Machine Learning avatar">
+            <img src="assets/ML.jpeg" alt="Machine Learning profile photo" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          </figure>
+          <div class="name">Machine Learning</div>
+          <div class="role">Modeling · scikit-learn · TensorFlow</div>
+          <div class="meta">
+            <span class="pill">MLOps</span>
+            <span class="pill">Forecasting</span>
+            <span class="pill">NLP</span>
+          </div>
+        </article>
 
-  <footer></footer>
+        <!-- Product Analytics -->
+        <article class="profile" tabindex="0" role="button" aria-pressed="false" data-profile='{"id":"analytics","name":"Product Analytics","subtitle":"Dashboards & SQL","avatar":"PA"}'>
+          <figure class="avatar" aria-label="Product Analytics avatar">
+            <img src="assets/PA.jpeg" alt="Product Analytics profile photo" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          </figure>
+          <div class="name">Product Analytics</div>
+          <div class="role">SQL · BI · Experimentation</div>
+          <div class="meta">
+            <span class="pill">A/B</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">Metrics</span>
+          </div>
+        </article>
+      </section>
+
+      <a class="cta" id="open-last" href="#" style="display:none" aria-label="Open last profile">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+        <span>Open last profile</span>
+      </a>
+      <div class="helper" id="helperText">Tip: press <kbd>Enter</kbd> to open, <kbd>←/→</kbd> to move</div>
+    </main>
+
+    <footer>© <span id="year"></span> Your Name</footer>
+  </div>
 
 <script>
-  // Click / keyboard behavior
-  const cards = Array.from(document.querySelectorAll('.profile'));
-  const openLastBtn = document.getElementById('open-last');
+  // ----- Utilities -----
+  const $ = (sel, root=document) => root.querySelector(sel);
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+  // Theme
+  const themeKey = 'portfolioTheme';
+  const root = document.documentElement;
+  const savedTheme = localStorage.getItem(themeKey);
+  if(savedTheme){
+    if(savedTheme === 'light') root.setAttribute('data-theme','light');
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    root.setAttribute('data-theme','light');
+  }
+  const themeToggle = $('#themeToggle');
+  function toggleTheme(){
+    const isLight = root.getAttribute('data-theme') === 'light';
+    root.toggleAttribute('data-theme');
+    if(isLight){ root.removeAttribute('data-theme'); localStorage.setItem(themeKey,'dark'); }
+    else { root.setAttribute('data-theme','light'); localStorage.setItem(themeKey,'light'); }
+    themeToggle.setAttribute('aria-pressed', String(!isLight));
+  }
+  themeToggle.addEventListener('click', toggleTheme);
+  themeToggle.setAttribute('aria-pressed', String(root.getAttribute('data-theme')==='light'));
+
+  // Keyboard / click behavior
+  const cards = $$('.profile');
+  const openLastBtn = $('#open-last');
+  const helperText = $('#helperText');
 
   function goToProfile(profile){
-    // save selection (localStorage) and redirect to profiles.html
     localStorage.setItem('chosenProfile', JSON.stringify(profile));
-    // navigate to the SPA page
     location.href = 'profiles.html';
   }
 
@@ -109,18 +213,26 @@
     });
   });
 
-  // show "open last" if chosenProfile exists
+  // Show "open last" if chosenProfile exists
   const last = localStorage.getItem('chosenProfile');
   if(last){
     const p = JSON.parse(last);
-    openLastBtn.style.display = 'inline-block';
-    openLastBtn.textContent = `Open ${p.name}`;
+    openLastBtn.style.display = 'inline-flex';
+    openLastBtn.querySelector('span').textContent = `Open ${p.name}`;
     openLastBtn.onclick = (e)=>{ e.preventDefault(); location.href='profiles.html'; };
   }
 
-  // If user clicks the root domain directly (you requested "directly open a profile chooser"),
-  // this file is already the chooser. If you want the site's root to redirect to this file automatically,
-  // make this file be the repo's index.html (done).
+  // Nice focus ring on first interaction with keyboard
+  function handleFirstTab(e){
+    if(e.key === 'Tab'){
+      document.body.classList.add('user-is-tabbing');
+      window.removeEventListener('keydown', handleFirstTab);
+    }
+  }
+  window.addEventListener('keydown', handleFirstTab);
+
+  // Footer year
+  $('#year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
