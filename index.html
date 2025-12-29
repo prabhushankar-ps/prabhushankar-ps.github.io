@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    #ballpit-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+    }
+    body {
+      background: transparent;
+    }
+
     :root{
       --bg:#0b0b0b;
       --bg2:#111;
@@ -95,6 +104,8 @@
   </style>
 </head>
 <body>
+  <div id="ballpit-bg"></div>
+  <script src="assets/ballpit/ballpit-bg.js"></script>
   <div class="container" role="application" aria-label="Profile chooser app">
     <header>
       <div class="brand" aria-label="Brand">
