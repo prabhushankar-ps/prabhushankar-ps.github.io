@@ -3,147 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ꜱʏᴇᴅ ᴀʙᴅᴜʟ ᴀᴍᴀɴ | Data Analyst & Generative AI Developer</title>
-  <meta
-    name="description"
-    content="Portfolio of a Data Analyst & Generative AI Developer focused on analytics, automation, and practical GenAI applications."
-  />
+  <title>Prabhu Shankar | Data Engineer</title>
+  <meta name="description" content="Portfolio of Prabhu Shankar — Data Engineer with 4+ years building ETL/ELT pipelines across AWS, Snowflake, Databricks, and more." />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
-    :root {
-      color-scheme: dark;
-    }
+    :root { color-scheme: dark; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
     }
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #020617;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1f2937;
-      border-radius: 999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #22c55e;
-    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
   <div class="min-h-screen flex flex-col" id="app">
-    <!-- Header / Navigation -->
+
+    <!-- Header -->
     <header class="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4 lg:px-0">
         <a href="#top" class="flex items-center gap-3" data-scroll>
           <div class="leading-tight">
-            <p class="text-sm font-semibold tracking-tight text-slate-50">ꜱʏᴇᴅ ᴀʙᴅᴜʟ ᴀᴍᴀɴ</p>
-            <p class="text-xs text-slate-400">Data Analyst &amp; Generative AI Developer</p>
+            <p class="text-sm font-semibold tracking-tight text-slate-50">Prabhu Shankar</p>
+            <p class="text-xs text-slate-400">Data Engineer</p>
           </div>
         </a>
-
         <nav class="hidden items-center gap-6 text-xs font-medium text-slate-300 md:flex">
-          <a
-            href="#about"
-            data-nav-link
-            data-scroll
-            class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-emerald-400"
-          >
-            About
-          </a>
-          <a
-            href="#skills"
-            data-nav-link
-            data-scroll
-            class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-emerald-400"
-          >
-            Skills
-          </a>
-          <a
-            href="#projects"
-            data-nav-link
-            data-scroll
-            class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-emerald-400"
-          >
-            Projects
-          </a>
-          <a
-            href="#certifications"
-            data-nav-link
-            data-scroll
-            class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-emerald-400"
-          >
-            Certifications
-          </a>
-          <a
-            href="#contact"
-            data-nav-link
-            data-scroll
-            class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-emerald-400"
-          >
-            Contact
-          </a>
+          <a href="#about" data-nav-link data-scroll class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-indigo-400">About</a>
+          <a href="#skills" data-nav-link data-scroll class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-indigo-400">Skills</a>
+          <a href="#experience" data-nav-link data-scroll class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-indigo-400">Experience</a>
+          <a href="#projects" data-nav-link data-scroll class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-indigo-400">Projects</a>
+          <a href="#contact" data-nav-link data-scroll class="relative px-1.5 py-1 text-slate-300 transition-colors hover:text-indigo-400">Contact</a>
         </nav>
-
-        <button
-          id="mobileNavToggle"
-          class="inline-flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900/60 px-2.5 py-1.5 text-xs font-medium text-slate-200 shadow-sm shadow-slate-900/60 transition hover:border-emerald-500 hover:text-emerald-300 md:hidden"
-          type="button"
-          aria-label="Toggle navigation"
-        >
+        <button id="mobileNavToggle" class="inline-flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900/60 px-2.5 py-1.5 text-xs font-medium text-slate-200 shadow-sm transition hover:border-indigo-500 hover:text-indigo-300 md:hidden" type="button" aria-label="Toggle navigation">
           <span class="mr-1 h-[1px] w-4 bg-current"></span>
           <span class="mr-1 h-[1px] w-4 bg-current"></span>
           <span class="h-[1px] w-4 bg-current"></span>
         </button>
       </div>
-
-      <div
-        id="mobileNav"
-        class="hidden border-t border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm text-slate-300 md:hidden"
-      >
+      <div id="mobileNav" class="hidden border-t border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm text-slate-300 md:hidden">
         <nav class="flex flex-col gap-1.5">
-          <a
-            href="#about"
-            data-nav-link
-            data-scroll
-            class="rounded-lg px-2 py-1.5 text-slate-300 transition hover:bg-slate-900 hover:text-emerald-300"
-          >
-            About
-          </a>
-          <a
-            href="#skills"
-            data-nav-link
-            data-scroll
-            class="rounded-lg px-2 py-1.5 text-slate-300 transition hover:bg-slate-900 hover:text-emerald-300"
-          >
-            Skills
-          </a>
-          <a
-            href="#projects"
-            data-nav-link
-            data-scroll
-            class="rounded-lg px-2 py-1.5 text-slate-300 transition hover:bg-slate-900 hover:text-emerald-300"
-          >
-            Projects
-          </a>
-          <a
-            href="#certifications"
-            data-nav-link
-            data-scroll
-            class="rounded-lg px-2 py-1.5 text-slate-300 transition hover:bg-slate-900 hover:text-emerald-300"
-          >
-            Certifications
-          </a>
-          <a
-            href="#contact"
-            data-nav-link
-            data-scroll
-            class="rounded-lg px-2 py-1.5 text-slate-300 transition hover:bg-slate-900 hover:text-emerald-300"
-          >
-            Contact
-          </a>
+          <a href="#about" data-nav-link data-scroll class="rounded-lg px-2 py-1.5 transition hover:bg-slate-900 hover:text-indigo-300">About</a>
+          <a href="#skills" data-nav-link data-scroll class="rounded-lg px-2 py-1.5 transition hover:bg-slate-900 hover:text-indigo-300">Skills</a>
+          <a href="#experience" data-nav-link data-scroll class="rounded-lg px-2 py-1.5 transition hover:bg-slate-900 hover:text-indigo-300">Experience</a>
+          <a href="#projects" data-nav-link data-scroll class="rounded-lg px-2 py-1.5 transition hover:bg-slate-900 hover:text-indigo-300">Projects</a>
+          <a href="#contact" data-nav-link data-scroll class="rounded-lg px-2 py-1.5 transition hover:bg-slate-900 hover:text-indigo-300">Contact</a>
         </nav>
       </div>
     </header>
@@ -152,110 +57,64 @@
       <!-- Hero -->
       <section id="top" class="relative overflow-hidden border-b border-slate-900/80 bg-gradient-to-b from-slate-950 to-slate-950">
         <div class="pointer-events-none absolute inset-x-0 top-[-18rem] -z-10 transform-gpu overflow-hidden blur-3xl">
-          <div
-            class="relative left-1/2 aspect-[1108/632] w-[72rem] -translate-x-1/2 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.55),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.5),_transparent_55%)] opacity-60"
-          ></div>
+          <div class="relative left-1/2 aspect-[1108/632] w-[72rem] -translate-x-1/2 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.5),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.4),_transparent_55%)] opacity-60"></div>
         </div>
-
-        <div
-          class="mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:py-20 lg:px-0 lg:py-24"
-        >
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:py-20 lg:px-0 lg:py-24">
           <div>
-            <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-400">Data • AI</p>
-            <h1
-              class="mt-4 text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl md:leading-tight"
-            >
-              ꜱʏᴇᴅ ᴀʙᴅᴜʟ ᴀᴍᴀɴ
-            </h1>
+            <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-indigo-400">Data Engineering • Cloud • Analytics</p>
+            <h1 class="mt-4 text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl md:leading-tight">Prabhu Shankar</h1>
             <p class="mt-3 text-base text-slate-300 sm:text-lg">
-              Data Analyst &amp;
-              <span id="roleTyping" class="border-r border-emerald-400 pr-1 font-semibold text-emerald-400"></span>
+              Data Engineer &amp;
+              <span id="roleTyping" class="border-r border-indigo-400 pr-1 font-semibold text-indigo-400"></span>
             </p>
             <p class="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-              I transform raw data into clear, actionable insights and build AI-driven tools that automate workflows,
-              augment decision-making, and create real business impact.
+              4+ years building and optimizing batch and streaming ETL/ELT pipelines across AWS, Snowflake, Azure, and Databricks. Focused on scalable lakehouse architectures, data quality, and high-impact analytics.
             </p>
-
             <div class="mt-6 flex flex-wrap items-center gap-3 text-[11px] text-slate-300">
-              <span
-                class="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-medium text-emerald-300 shadow-[0_0_0_1px_rgba(16,185,129,0.4)]"
-              >
-                End-to-end analytics
-              </span>
-              <span
-                class="inline-flex items-center gap-1 rounded-full border border-sky-500/40 bg-sky-500/10 px-3 py-1 font-medium text-sky-300"
-              >
-                Generative AI products
-              </span>
-              <span
-                class="inline-flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900/80 px-3 py-1 font-medium text-slate-200"
-              >
-                Secure, reliable workflows
-              </span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-3 py-1 font-medium text-indigo-300 shadow-[0_0_0_1px_rgba(99,102,241,0.4)]">AWS · Snowflake · Databricks</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-sky-500/40 bg-sky-500/10 px-3 py-1 font-medium text-sky-300">PySpark · dbt · Airflow</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900/80 px-3 py-1 font-medium text-slate-200">Open to Remote &amp; Contract</span>
             </div>
-
             <div class="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="#projects"
-                data-scroll
-                class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 transition hover:bg-emerald-400"
-              >
-                View Projects
-              </a>
-              <a
-                href="#skills"
-                data-scroll
-                class="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-medium text-slate-100 shadow-sm shadow-slate-900/60 transition hover:border-emerald-500 hover:text-emerald-300"
-              >
-                Explore Skills
-              </a>
+              <a href="#experience" data-scroll class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/40 transition hover:bg-indigo-400">View Experience</a>
+              <a href="#skills" data-scroll class="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-medium text-slate-100 shadow-sm transition hover:border-indigo-500 hover:text-indigo-300">Explore Skills</a>
+              <a href="mailto:prabhushankargv@gmail.com" class="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-medium text-slate-100 shadow-sm transition hover:border-indigo-500 hover:text-indigo-300">Contact Me</a>
             </div>
           </div>
 
           <aside class="relative md:justify-self-end">
-            <div
-              class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-emerald-500/10 blur-3xl filter"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 p-5 shadow-[0_18px_45px_rgba(15,23,42,0.9)]"
-            >
-              <div class="mb-4 flex items-center justify-center">
-                <img src="data:image/png;base64,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" alt="Profile image of ꜱʏᴇᴅ ᴀʙᴅᴜʟ ᴀᴍᴀɴ" class="h-20 w-20 rounded-2xl border border-slate-700 object-cover shadow-lg shadow-emerald-500/30" />
-              </div>
-              <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">Snapshot</p>
-              <p class="mt-2 text-sm font-medium text-slate-100">Data Analyst &amp; Generative AI Developer</p>
-              <p class="mt-1 text-xs text-slate-400">
-                Focused on analytics, intelligent automation, and practical GenAI for real-world impact.
-              </p>
-
+            <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl filter" aria-hidden="true"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 p-5 shadow-[0_18px_45px_rgba(15,23,42,0.9)]">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">Quick Profile</p>
+              <p class="mt-2 text-sm font-medium text-slate-100">Prabhu Shankar</p>
+              <p class="mt-1 text-xs text-slate-400">Data Engineer · Atlanta, GA</p>
               <dl class="mt-4 space-y-2 text-xs text-slate-200">
                 <div class="flex items-center justify-between gap-4">
-                  <dt class="text-slate-400">Core pillars</dt>
-                  <dd class="font-medium text-emerald-300">Data • AI</dd>
+                  <dt class="text-slate-400">Experience</dt>
+                  <dd class="font-medium text-indigo-300">4+ Years</dd>
                 </div>
                 <div class="flex items-center justify-between gap-4">
-                  <dt class="text-slate-400">Tooling</dt>
-                  <dd class="text-right text-slate-200">
-                    Excel · Python · SQL · LLMs · APIs · Cloud basics
-                  </dd>
+                  <dt class="text-slate-400">Education</dt>
+                  <dd class="text-right text-slate-200">MS Data Analytics, Mercer</dd>
                 </div>
                 <div class="flex items-center justify-between gap-4">
-                  <dt class="text-slate-400">What I build</dt>
-                  <dd class="text-right text-slate-200">Dashboards · AI copilots · automation scripts</dd>
+                  <dt class="text-slate-400">Prior</dt>
+                  <dd class="text-right text-slate-200">Goldman Sachs</dd>
+                </div>
+                <div class="flex items-center justify-between gap-4">
+                  <dt class="text-slate-400">Availability</dt>
+                  <dd class="font-medium text-indigo-300">Open to Roles</dd>
                 </div>
               </dl>
-
-              <div class="mt-5 grid grid-cols-3 gap-2 text-[10px]">
+              <div class="mt-5 grid grid-cols-2 gap-2 text-[10px]">
                 <div class="rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2">
-                  <p class="text-[10px] font-semibold text-slate-200">Data</p>
-                  <p class="mt-1 text-[10px] text-slate-400">Cleaning, modeling, and dashboards that surface signal.</p>
+                  <p class="text-[10px] font-semibold text-slate-200">Pipelines</p>
+                  <p class="mt-1 text-[10px] text-slate-400">Batch & streaming ETL/ELT at scale.</p>
                 </div>
                 <div class="rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2">
-                  <p class="text-[10px] font-semibold text-slate-200">Generative AI</p>
-                  <p class="mt-1 text-[10px] text-slate-400">LLM-powered tools, RAG systems, and AI-first workflows.</p>
+                  <p class="text-[10px] font-semibold text-slate-200">Cloud</p>
+                  <p class="mt-1 text-[10px] text-slate-400">AWS, Azure, Snowflake, Databricks.</p>
                 </div>
-
               </div>
             </div>
           </aside>
@@ -269,55 +128,48 @@
             <div>
               <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">About Me</h2>
               <p class="mt-4 text-sm leading-relaxed text-slate-300 sm:text-base">
-                I am a Data Analyst &amp; Generative AI Developer focused on transforming data into meaningful insights and
-                building intelligent systems that support better decisions.
+                I'm a Data Engineer with 4+ years of experience designing production-grade data pipelines and warehouse architectures. My background spans Goldman Sachs, Mercer University, and Data Engineering Academy — where I've worked across financial analytics, research data systems, and enterprise-scale pipelines.
               </p>
               <p class="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">
-                I design AI-driven solutions that automate insight generation, streamline workflows, and increase the
-                reliability of everyday operations. My interests span predictive analytics, intelligent automation, and
-                practical GenAI applications that deliver measurable impact.
+                I specialize in turning messy, high-volume data into reliable, analytics-ready systems. Whether it's reducing ETL runtimes by 55%, saving $250K annually through architecture redesigns, or building KPI dashboards trusted by executives — I care about impact, not just output.
               </p>
-
               <div class="mt-6 grid gap-4 text-sm sm:grid-cols-2">
                 <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">How I think</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">How I work</p>
                   <ul class="mt-3 space-y-1.5 text-xs text-slate-300">
-                    <li>• Start with the problem, not the model.</li>
-                    <li>• Design for clarity, reliability, and maintainability.</li>
-                    <li>• Blend analytics, automation, and good UX.</li>
+                    <li>• Start with the data contract, not the tooling.</li>
+                    <li>• Build for observability and reliability from day one.</li>
+                    <li>• Optimize for the query that runs a thousand times a day.</li>
                   </ul>
                 </div>
                 <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">I enjoy working on</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">What I enjoy</p>
                   <ul class="mt-3 space-y-1.5 text-xs text-slate-300">
-                    <li>• Data pipelines from raw sources to clean, trusted tables.</li>
-                    <li>• Dashboards that tell a clear story.</li>
-                    <li>• AI copilots that plug directly into workflows.</li>
+                    <li>• Designing lakehouse architectures and medallion pipelines.</li>
+                    <li>• Tuning SQL and Spark jobs for 10x performance gains.</li>
+                    <li>• Bridging data engineering and business analytics.</li>
                   </ul>
                 </div>
               </div>
             </div>
-
             <div class="space-y-4 rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Quick profile</p>
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">At a Glance</p>
               <dl class="space-y-3 text-sm text-slate-200">
                 <div class="flex items-start justify-between gap-4">
                   <dt class="text-xs text-slate-400">Current focus</dt>
-                  <dd class="text-right text-xs text-slate-100">
-                    Turning messy data into insights, and wrapping those insights in AI-driven tools.
-                  </dd>
+                  <dd class="text-right text-xs text-slate-100">Remote & contract data engineering roles with complex pipeline ownership.</dd>
                 </div>
                 <div class="flex items-start justify-between gap-4">
-                  <dt class="text-xs text-slate-400">What I bring</dt>
-                  <dd class="text-right text-xs text-slate-100">
-                    Strong analytics, practical machine learning, and the ability to ship useful GenAI products.
-                  </dd>
+                  <dt class="text-xs text-slate-400">Core strengths</dt>
+                  <dd class="text-right text-xs text-slate-100">ETL/ELT design, Spark optimization, dimensional modeling, Snowflake/Redshift.</dd>
                 </div>
                 <div class="flex items-start justify-between gap-4">
-                  <dt class="text-xs text-slate-400">Looking for</dt>
-                  <dd class="text-right text-xs text-slate-100">
-                    Opportunities to build AI-powered dashboards, assistants, and automations that make teams faster.
-                  </dd>
+                  <dt class="text-xs text-slate-400">Education</dt>
+                  <dd class="text-right text-xs text-slate-100">MS Data Analytics — Mercer University (May 2025). Top 5% at Big Data Health Competition.</dd>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <dt class="text-xs text-slate-400">Certifications</dt>
+                  <dd class="text-right text-xs text-slate-100">dbt · Alteryx Designer · Databricks Fundamentals · Lean Six Sigma</dd>
                 </div>
               </dl>
             </div>
@@ -330,226 +182,171 @@
         <div class="mx-auto max-w-6xl px-4 lg:px-0">
           <div class="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Core Proficiencies &amp; Skills</h2>
-              <p class="mt-2 max-w-xl text-sm text-slate-300">
-                My technical foundation is built on two pillars: data and AI — supported by end-to-end
-                skills across analysis, engineering, and product development.
-              </p>
+              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Technical Skills</h2>
+              <p class="mt-2 max-w-xl text-sm text-slate-300">End-to-end data engineering across cloud, orchestration, transformation, and analytics.</p>
             </div>
-            <p class="text-[11px] text-slate-400">
-              Tools I use often: <span class="text-slate-200">Excel, Python, SQL, LLM APIs, Git, cloud platforms</span>
-            </p>
+            <p class="text-[11px] text-slate-400">Core stack: <span class="text-slate-200">Python · SQL · PySpark · dbt · Airflow · AWS · Snowflake</span></p>
           </div>
 
           <div class="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.1fr)]">
-            <!-- Core pillars interactive panel -->
             <div>
               <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Core pillars</p>
-              <h3 class="mt-2 text-sm font-semibold text-slate-100 sm:text-base">Data • AI</h3>
-              <p class="mt-2 text-xs text-slate-300 sm:text-sm">
-                Select a pillar to see how it shows up in my daily work.
-              </p>
-
+              <h3 class="mt-2 text-sm font-semibold text-slate-100 sm:text-base">Data Engineering • Cloud • Analytics</h3>
               <div class="mt-5 flex flex-wrap gap-2.5 text-xs">
-                <button
-                  type="button"
-                  data-pillar="data"
-                  class="rounded-full border border-emerald-500 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-300 shadow-[0_0_0_1px_rgba(16,185,129,0.6)] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                >
-                  Data
-                </button>
-                <button
-                  type="button"
-                  data-pillar="ai"
-                  class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:border-emerald-500/70 hover:text-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                >
-                  AI
-                </button>
+                <button type="button" data-pillar="pipelines" class="rounded-full border border-indigo-500 bg-indigo-500/10 px-3 py-1.5 text-xs font-medium text-indigo-300 shadow-[0_0_0_1px_rgba(99,102,241,0.6)] transition focus-visible:outline-none">Pipelines</button>
+                <button type="button" data-pillar="cloud" class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:border-indigo-500/70 hover:text-indigo-300 focus-visible:outline-none">Cloud</button>
+                <button type="button" data-pillar="analytics" class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:border-indigo-500/70 hover:text-indigo-300 focus-visible:outline-none">Analytics</button>
               </div>
-
               <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">How I use it</p>
-                <h3 id="pillarTitle" class="mt-3 text-sm font-semibold text-emerald-300">Data</h3>
-                <p id="pillarBody" class="mt-2 text-xs leading-relaxed text-slate-300">
-                  High-level Excel modeling, Python, SQL, and data analytics to explore, clean, and structure data into
-                  reliable datasets that answer real questions.
-                </p>
+                <h3 id="pillarTitle" class="mt-3 text-sm font-semibold text-indigo-300">Pipelines</h3>
+                <p id="pillarBody" class="mt-2 text-xs leading-relaxed text-slate-300">Designing and optimizing batch and streaming ETL/ELT pipelines using AWS Glue, PySpark, Kafka, Airflow, and dbt — with a focus on performance, reliability, and data quality.</p>
                 <ul id="pillarList" class="mt-3 space-y-1.5 text-xs text-slate-300">
-                  <li>• Build Excel and Python models to explore scenarios and trends.</li>
-                  <li>• Write SQL queries to shape, join, and aggregate data.</li>
-                  <li>• Create dashboards and reports that surface the right metrics.</li>
+                  <li>• Reduce job runtimes with partitioning, caching, and SARGable SQL.</li>
+                  <li>• Orchestrate complex DAGs with Airflow and manage SLA compliance.</li>
+                  <li>• Implement dbt transformations with automated testing and lineage.</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Professional skills accordion -->
             <div class="space-y-4 rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Professional skills</p>
-
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Skill areas</p>
               <div class="grid gap-3 sm:grid-cols-2">
-                <!-- Data Analysis -->
+
                 <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
-                    <span>Data Analysis</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200 rotate-180"
-                    >
-                      ▾
-                    </span>
+                  <button type="button" data-accordion-btn class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100">
+                    <span>Languages</span>
+                    <span data-accordion-icon class="ml-2 text-[10px] text-slate-400 transition-transform duration-200 rotate-180">▾</span>
                   </button>
                   <div class="mt-3 space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Advanced Excel modeling and analysis.</p>
-                    <p>• Data cleaning and preparation for analytics.</p>
-                    <p>• Visualization with Tableau, Power BI, and Matplotlib.</p>
-                    <p>• Python (Pandas, NumPy) for exploratory data analysis.</p>
-                    <p>• Statistical analysis for trends and significance.</p>
+                    <p>• Python (Pandas, NumPy, Scikit-learn, Boto3)</p>
+                    <p>• SQL · Oracle PL/SQL</p>
+                    <p>• Java · Shell Script</p>
                   </div>
                 </div>
 
-                <!-- Machine Learning -->
                 <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
-                    <span>Machine Learning</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200"
-                    >
-                      ▾
-                    </span>
-                  </button>
-                  <div class="mt-3 hidden space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Regression, classification, and clustering techniques.</p>
-                    <p>• Model training, validation, and evaluation workflows.</p>
-                    <p>• Scikit-learn pipelines for reproducible experiments.</p>
-                    <p>• Translating business problems into ML tasks.</p>
-                  </div>
-                </div>
-
-                <!-- Generative AI Development -->
-                <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
-                    <span>Generative AI Development</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200"
-                    >
-                      ▾
-                    </span>
-                  </button>
-                  <div class="mt-3 hidden space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Prompt engineering for reliable, structured outputs.</p>
-                    <p>• RAG pipelines using embeddings and vector databases.</p>
-                    <p>• LLM finetuning basics and evaluation strategies.</p>
-                    <p>• API integration with OpenAI, Gemini, Llama and others.</p>
-                  </div>
-                </div>
-
-                <!-- Python Development -->
-                <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
-                    <span>Python Development</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200"
-                    >
-                      ▾
-                    </span>
-                  </button>
-                  <div class="mt-3 hidden space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Object-oriented programming and modular code design.</p>
-                    <p>• Building and consuming REST APIs.</p>
-                    <p>• Web scraping and automation scripts.</p>
-                    <p>• Notebook workflows for analysis and experimentation.</p>
-                  </div>
-                </div>
-
-                <!-- Data Engineering -->
-                <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
+                  <button type="button" data-accordion-btn class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100">
                     <span>Data Engineering</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200"
-                    >
-                      ▾
-                    </span>
+                    <span data-accordion-icon class="ml-2 text-[10px] text-slate-400 transition-transform duration-200">▾</span>
                   </button>
                   <div class="mt-3 hidden space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Writing SQL for reporting and data transformations.</p>
-                    <p>• Designing ETL workflows and data pipelines.</p>
-                    <p>• Working with cloud fundamentals (AWS, GCP, Azure).</p>
-                    <p>• Version control and collaboration with Git.</p>
+                    <p>• Apache Spark (PySpark, Spark SQL)</p>
+                    <p>• Apache Airflow · Apache Kafka · Hadoop</p>
+                    <p>• dbt · Airbyte · IBM DataStage · Informatica</p>
+                    <p>• Docker · Terraform · CI/CD (Git, GitHub Actions)</p>
                   </div>
                 </div>
 
-                <!-- AI Project Development -->
                 <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
-                    <span>AI Project Development</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200"
-                    >
-                      ▾
-                    </span>
+                  <button type="button" data-accordion-btn class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100">
+                    <span>Cloud Platforms</span>
+                    <span data-accordion-icon class="ml-2 text-[10px] text-slate-400 transition-transform duration-200">▾</span>
                   </button>
                   <div class="mt-3 hidden space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Designing AI chatbots and productivity tools.</p>
-                    <p>• Backend integration with FastAPI or Flask.</p>
-                    <p>• Combining traditional ML with GenAI capabilities.</p>
-                    <p>• Scoping, planning, and documenting AI projects.</p>
+                    <p>• AWS (S3, EMR, Glue, Redshift, Lambda, Kinesis, RDS, IAM)</p>
+                    <p>• Snowflake · Databricks · DynamoDB</p>
+                    <p>• Azure Data Factory · Azure DevOps</p>
+                    <p>• KubeFlow · Teradata</p>
                   </div>
                 </div>
 
-                <!-- Soft Skills -->
-                <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:col-span-2">
-                  <button
-                    type="button"
-                    data-accordion-btn
-                    class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100"
-                  >
-                    <span>Soft Skills</span>
-                    <span
-                      data-accordion-icon
-                      class="ml-2 text-[10px] text-slate-400 transition-transform duration-200"
-                    >
-                      ▾
-                    </span>
+                <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+                  <button type="button" data-accordion-btn class="flex w-full items-center justify-between text-left text-xs font-semibold text-slate-100">
+                    <span>Architecture & Analytics</span>
+                    <span data-accordion-icon class="ml-2 text-[10px] text-slate-400 transition-transform duration-200">▾</span>
                   </button>
                   <div class="mt-3 hidden space-y-1.5 text-[11px] text-slate-300" data-accordion-content>
-                    <p>• Structured problem-solving and critical thinking.</p>
-                    <p>• Clear technical documentation and communication.</p>
-                    <p>• Collaboration across technical and non-technical teams.</p>
-                    <p>• Planning, prioritization, and scope management.</p>
+                    <p>• Data Modeling — Star Schema, SCD Type 2, 3NF, Inmon</p>
+                    <p>• Data Warehousing · Lakehouse Architecture</p>
+                    <p>• Real-Time Streaming · A/B Testing · ML Pipelines</p>
+                    <p>• Power BI · Tableau · Data Governance</p>
                   </div>
                 </div>
+
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" data-section class="border-b border-slate-900/80 bg-slate-950 py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-0">
+          <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Work Experience</h2>
+          <p class="mt-2 max-w-2xl text-sm text-slate-300">4+ years across enterprise analytics, research data systems, and production data engineering.</p>
+
+          <div class="mt-8 space-y-5">
+
+            <!-- DEA -->
+            <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-5 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/10">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-50">Data Engineer</h3>
+                  <p class="mt-0.5 text-xs font-medium text-indigo-300">Data Engineering Academy · Atlanta, GA</p>
+                </div>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-[10px] text-slate-400">Jul 2025 – Present</span>
+              </div>
+              <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                <li>• Designed and optimized batch ETL pipelines using <span class="text-slate-100">AWS Glue, SQL, and Oracle PL/SQL</span>, reducing job runtime from 90 to 40 minutes — a <span class="text-indigo-300 font-medium">55% efficiency gain</span>.</li>
+                <li>• Implemented near real-time ingestion with <span class="text-slate-100">Amazon Kinesis Firehose</span> into S3 and Snowflake, reducing reporting latency by <span class="text-indigo-300 font-medium">35%</span>.</li>
+                <li>• Built <span class="text-slate-100">PySpark transformation pipelines</span> on Databricks with partitioning, caching, and query optimization — <span class="text-indigo-300 font-medium">30% performance improvement</span> on high-volume datasets.</li>
+                <li>• Built <span class="text-slate-100">dimensional models (star schema, SCD Type 2)</span> in Snowflake supporting 20+ business analytics use cases.</li>
+                <li>• Integrated <span class="text-slate-100">dbt with Snowflake</span> for standardized ELT, automated testing, and data quality enforcement — cutting reporting discrepancies by <span class="text-indigo-300 font-medium">25%</span>.</li>
+                <li>• Led a <span class="text-slate-100">5-member agile team</span>, improving release velocity 15% and achieving 90% on-time deployments.</li>
+                <li>• Delivered <span class="text-slate-100">20+ Power BI dashboards</span> backed by validated pipelines for KPI tracking and client reporting.</li>
+              </ul>
+            </article>
+
+            <!-- Mercer -->
+            <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-5 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/10">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-50">Research Assistant</h3>
+                  <p class="mt-0.5 text-xs font-medium text-indigo-300">Mercer University · Atlanta, GA</p>
+                </div>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-[10px] text-slate-400">Aug 2024 – May 2025</span>
+              </div>
+              <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                <li>• Engineered ELT pipelines on <span class="text-slate-100">Amazon Redshift</span> for $2B AUM datasets — reduced daily ETL latency by <span class="text-indigo-300 font-medium">45 minutes</span> with Python-based anomaly detection.</li>
+                <li>• Built <span class="text-slate-100">Kafka-based ingestion pipelines</span> with consumer groups and offset management, improving data freshness and reducing reporting latency by <span class="text-indigo-300 font-medium">20%</span>.</li>
+                <li>• Optimized warehouse query performance by <span class="text-indigo-300 font-medium">11%</span> through SARGable SQL tuning, partition pruning, and indexing.</li>
+                <li>• Reduced storage footprint by <span class="text-indigo-300 font-medium">200TB</span> through feature-engineered columns and refined retention policies — generating <span class="text-indigo-300 font-medium">$15K biannual</span> revenue impact.</li>
+              </ul>
+            </article>
+
+            <!-- Goldman Sachs Senior -->
+            <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-5 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/10">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-50">Senior Data Analyst</h3>
+                  <p class="mt-0.5 text-xs font-medium text-indigo-300">Goldman Sachs · Bengaluru, India</p>
+                </div>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-[10px] text-slate-400">Jan 2023 – Dec 2023</span>
+              </div>
+              <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                <li>• Reduced data model loading time by <span class="text-indigo-300 font-medium">25+ hours weekly</span> implementing 3NF schemas in Databricks and optimizing ELT with PySpark, SQL, and Terraform.</li>
+                <li>• Achieved bi-weekly zero-downtime production deployments via CI/CD with Git and Spark loads into Redshift — <span class="text-indigo-300 font-medium">10% pipeline efficiency gain</span>.</li>
+                <li>• Led an <span class="text-slate-100">8-member agile team</span> through full SDLC on AWS — sprint velocity +25% with 98% on-time delivery.</li>
+              </ul>
+            </article>
+
+            <!-- Goldman Sachs Analyst -->
+            <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-5 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/10">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-50">Data Analyst</h3>
+                  <p class="mt-0.5 text-xs font-medium text-indigo-300">Goldman Sachs · Bengaluru, India</p>
+                </div>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-[10px] text-slate-400">May 2020 – Dec 2022</span>
+              </div>
+              <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                <li>• Saved <span class="text-indigo-300 font-medium">$250K annually</span> implementing scalable batch processing with Snowflake, Airbyte ingestion, and optimized PySpark.</li>
+                <li>• Improved pipeline throughput by <span class="text-indigo-300 font-medium">20%</span> via Inmon modeling, partitioning strategies, and SQL tuning across 15+ executive Tableau dashboards.</li>
+                <li>• Reduced manual intervention by <span class="text-indigo-300 font-medium">60%</span> through Airflow-orchestrated ETL with dbt, AI-driven log monitoring, and automated data quality checks.</li>
+              </ul>
+            </article>
+
           </div>
         </div>
       </section>
@@ -559,210 +356,43 @@
         <div class="mx-auto max-w-6xl px-4 lg:px-0">
           <div class="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Featured Projects</h2>
-              <p class="mt-2 max-w-2xl text-sm text-slate-300">
-                A selection of recent work where I applied data, design, and development skills to build AI-first
-                products, automation, and decision-support tools.
-              </p>
+              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Projects</h2>
+              <p class="mt-2 max-w-2xl text-sm text-slate-300">Production-grade pipelines and systems built end-to-end.</p>
             </div>
-            <p class="text-[11px] text-slate-400">
-              Ask me for live demos, code samples, or walkthroughs of any project.
-            </p>
           </div>
 
           <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <!-- AI Resume Builder -->
-            <article
-              class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-emerald-500/70 hover:shadow-lg hover:shadow-emerald-500/15"
-            >
+
+            <article class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/15">
               <div class="mb-2 flex items-center justify-between gap-2">
-                <h3 class="text-sm font-semibold text-slate-50">AI Resume Builder</h3>
-                <span
-                  class="rounded-full border border-emerald-500/50 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-300"
-                >
-                  Generative AI
-                </span>
+                <h3 class="text-sm font-semibold text-slate-50">Wistia Media Analytics Pipeline</h3>
+                <span class="rounded-full border border-indigo-500/50 bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-indigo-300">ETL</span>
               </div>
-              <p class="flex-1 text-xs leading-relaxed text-slate-300">
-                Generates optimized, tailored resumes by aligning your experience with target job descriptions while
-                staying ATS-friendly.
-              </p>
-              <p class="mt-3 text-[11px] text-slate-400">Stack: Python · LLM APIs · Templates · Streamlit / web UI</p>
-              <button
-                type="button"
-                data-project-open
-                data-project-key="resume"
-                class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 transition hover:text-emerald-200"
-              >
-                View details
-                <span class="text-[10px]">→</span>
-              </button>
+              <p class="flex-1 text-xs leading-relaxed text-slate-300">Production-grade medallion pipeline (Bronze → Silver → Gold) ingesting Wistia API data daily, processing ~85,000 records across 350 media objects per run with &lt;1.2-minute runtime and &lt;1% failure rate.</p>
+              <p class="mt-3 text-[11px] text-slate-400">Stack: Python · AWS S3 · Apache Airflow · Pandas · Parquet</p>
+              <button type="button" data-project-open data-project-key="wistia" class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-indigo-300 transition hover:text-indigo-200">View details <span class="text-[10px]">→</span></button>
             </article>
 
-            <!-- AI Study Notes Generator -->
-            <article
-              class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-emerald-500/70 hover:shadow-lg hover:shadow-emerald-500/15"
-            >
+            <article class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/15">
               <div class="mb-2 flex items-center justify-between gap-2">
-                <h3 class="text-sm font-semibold text-slate-50">AI Study Notes Generator</h3>
-                <span
-                  class="rounded-full border border-sky-500/50 bg-sky-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sky-300"
-                >
-                  Learning
-                </span>
+                <h3 class="text-sm font-semibold text-slate-50">Football Stadium Data Pipeline</h3>
+                <span class="rounded-full border border-sky-500/50 bg-sky-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sky-300">Analytics</span>
               </div>
-              <p class="flex-1 text-xs leading-relaxed text-slate-300">
-                Converts long PDFs into concise notes, flashcards, and quiz questions, helping learners revise faster and
-                retain more.
-              </p>
-              <p class="mt-3 text-[11px] text-slate-400">Stack: Python · PDF parsing · Embeddings · LLM APIs</p>
-              <button
-                type="button"
-                data-project-open
-                data-project-key="study"
-                class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 transition hover:text-emerald-200"
-              >
-                View details
-                <span class="text-[10px]">→</span>
-              </button>
+              <p class="flex-1 text-xs leading-relaxed text-slate-300">Containerized ETL pipeline extracting, cleaning, and storing football stadium data into Azure Data Lake — reducing manual collection time by 90% and enabling win-percentage analytics for 10–12 additional match wins per season.</p>
+              <p class="mt-3 text-[11px] text-slate-400">Stack: Python · Apache · dbt · Azure Data Lake</p>
+              <button type="button" data-project-open data-project-key="football" class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-indigo-300 transition hover:text-indigo-200">View details <span class="text-[10px]">→</span></button>
             </article>
 
-            <!-- API Data Collector -->
-            <article
-              class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-emerald-500/70 hover:shadow-lg hover:shadow-emerald-500/15"
-            >
+            <article class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-indigo-500/70 hover:shadow-lg hover:shadow-indigo-500/15">
               <div class="mb-2 flex items-center justify-between gap-2">
-                <h3 class="text-sm font-semibold text-slate-50">API Data Collector</h3>
-                <span
-                  class="rounded-full border border-purple-500/50 bg-purple-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-purple-200"
-                >
-                  Automation
-                </span>
+                <h3 class="text-sm font-semibold text-slate-50">Social Media REST API</h3>
+                <span class="rounded-full border border-purple-500/50 bg-purple-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-purple-200">Backend</span>
               </div>
-              <p class="flex-1 text-xs leading-relaxed text-slate-300">
-                Automates the retrieval, cleaning, and storage of data from multiple APIs, producing analytics-ready
-                tables and visualizations.
-              </p>
-              <p class="mt-3 text-[11px] text-slate-400">Stack: Python · REST APIs · Scheduling · Visualization</p>
-              <button
-                type="button"
-                data-project-open
-                data-project-key="api"
-                class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 transition hover:text-emerald-200"
-              >
-                View details
-                <span class="text-[10px]">→</span>
-              </button>
+              <p class="flex-1 text-xs leading-relaxed text-slate-300">RESTful API with secure JWT authentication, post management, and voting system — handling 1,000+ concurrent requests with &lt;200ms latency. Improved developer onboarding by 50% via automated docs and modularized routing.</p>
+              <p class="mt-3 text-[11px] text-slate-400">Stack: FastAPI · PostgreSQL · SQLAlchemy · JWT</p>
+              <button type="button" data-project-open data-project-key="api" class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-indigo-300 transition hover:text-indigo-200">View details <span class="text-[10px]">→</span></button>
             </article>
 
-            <!-- Personal Finance Analyzer -->
-            <article
-              class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-emerald-500/70 hover:shadow-lg hover:shadow-emerald-500/15"
-            >
-              <div class="mb-2 flex items-center justify-between gap-2">
-                <h3 class="text-sm font-semibold text-slate-50">Personal Finance Analyzer</h3>
-                <span
-                  class="rounded-full border border-amber-500/50 bg-amber-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-200"
-                >
-                  Analytics
-                </span>
-              </div>
-              <p class="flex-1 text-xs leading-relaxed text-slate-300">
-                Tracks spending, savings, and patterns across accounts, surfacing insights that support better financial
-                planning.
-              </p>
-              <p class="mt-3 text-[11px] text-slate-400">Stack: Excel / Sheets · Python · Visualization</p>
-              <button
-                type="button"
-                data-project-open
-                data-project-key="finance"
-                class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 transition hover:text-emerald-200"
-              >
-                View details
-                <span class="text-[10px]">→</span>
-              </button>
-            </article>
-
-            <!-- Cloud-Based Model Deployment -->
-            <article
-              class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-4 transition hover:border-emerald-500/70 hover:shadow-lg hover:shadow-emerald-500/15 lg:col-span-1 md:col-span-2"
-            >
-              <div class="mb-2 flex items-center justify-between gap-2">
-                <h3 class="text-sm font-semibold text-slate-50">Cloud-Based Model Deployment</h3>
-                <span
-                  class="rounded-full border border-indigo-500/50 bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-indigo-200"
-                >
-                  MLOps
-                </span>
-              </div>
-              <p class="flex-1 text-xs leading-relaxed text-slate-300">
-                Deploys trained AI models behind simple APIs so that other applications, dashboards, or services can use
-                them reliably at scale.
-              </p>
-              <p class="mt-3 text-[11px] text-slate-400">Stack: Python · FastAPI / Flask · Cloud (AWS / GCP / Azure)</p>
-              <button
-                type="button"
-                data-project-open
-                data-project-key="cloud"
-                class="mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 transition hover:text-emerald-200"
-              >
-                View details
-                <span class="text-[10px]">→</span>
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section id="certifications" data-section class="border-b border-slate-900/80 bg-slate-950 py-16 md:py-20">
-        <div class="mx-auto max-w-6xl px-4 lg:px-0">
-          <div class="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">AI &amp; Generative AI Courses &amp; Certificates</h2>
-              <p class="mt-2 max-w-2xl text-sm text-slate-300">
-                A curated list of courses, simulations, and certifications I have completed across generative AI, data
-                analytics, and programming.
-              </p>
-            </div>
-            <p class="text-[11px] text-slate-400">
-              Focused on building practical, project-ready skills in AI, analytics, and engineering.
-            </p>
-          </div>
-
-          <div class="mt-8 grid gap-6 md:grid-cols-3">
-            <div class="space-y-3 rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">🎓 AI &amp; Generative AI Courses</p>
-              <ul class="mt-2 space-y-1.5 text-xs text-slate-300">
-                <li>🤖 ChatGPT Advanced Course</li>
-                <li>🌌 Introduction to Generative AI</li>
-                <li>🏗️ Introduction to Generative AI Studio</li>
-                <li>📊 GenAI Powered Data Analytics Job Simulation</li>
-                <li>🎓 Gemini Certification for University Students</li>
-                <li>👩‍🏫 Gemini Certified Educator</li>
-              </ul>
-            </div>
-
-            <div class="space-y-3 rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-400">📊 Data &amp; Analytics</p>
-              <ul class="mt-2 space-y-1.5 text-xs text-slate-300">
-                <li>📊 Data Analytics</li>
-                <li>🧪 Data Analytics Job Simulation</li>
-                <li>🗄️ SQL Certificate</li>
-                <li>📑 Excel Certificate</li>
-              </ul>
-            </div>
-
-            <div class="space-y-3 rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">💻 Programming</p>
-              <ul class="mt-2 space-y-1.5 text-xs text-slate-300">
-                <li>💻 Programming</li>
-                <li>🐍 Python (Basic Programming)</li>
-                <li>⚡ JavaScript Certificate</li>
-                <li>🔷 TypeScript Certificate</li>
-                <li>☕ Java Certificate</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -772,162 +402,74 @@
         <div class="mx-auto max-w-6xl px-4 lg:px-0">
           <div class="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Let&apos;s Build Something</h2>
-              <p class="mt-2 max-w-xl text-sm text-slate-300">
-                I&apos;m open to new projects, roles, and collaborations — especially where data, AI, and automation can
-                create measurable value.
-              </p>
+              <h2 class="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">Let's Connect</h2>
+              <p class="mt-2 max-w-xl text-sm text-slate-300">Open to remote and contract data engineering roles — especially complex pipeline ownership and lakehouse architecture work.</p>
             </div>
-            <p class="text-[11px] text-slate-400">Available for freelance, contract, or full-time opportunities.</p>
           </div>
-
           <div class="mt-8 grid gap-8 md:grid-cols-2">
-            <!-- Contact info -->
             <div class="space-y-5 rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
               <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Contact</p>
-              <p class="text-sm text-slate-200">Let&apos;s create something impactful together.</p>
-              <p class="text-xs text-slate-300">
-                Whether you&apos;re exploring a new AI initiative, need help with analytics, or want to automate part of
-                your workflow, I&apos;d be happy to learn more and see how I can help.
-              </p>
-
+              <p class="text-sm text-slate-200">Let's build something reliable together.</p>
               <dl class="mt-4 space-y-3 text-sm">
                 <div class="flex items-center gap-3">
                   <dt class="w-20 text-xs text-slate-400">Email</dt>
-                  <dd>
-                    <a
-                      href="mailto:amanbaba9404522@gmail.com"
-                      class="text-xs font-medium text-emerald-300 underline-offset-4 hover:underline"
-                    >
-                      amanbaba9404522@gmail.com
-                    </a>
-                  </dd>
+                  <dd><a href="mailto:prabhushankargv@gmail.com" class="text-xs font-medium text-indigo-300 underline-offset-4 hover:underline">prabhushankargv@gmail.com</a></dd>
                 </div>
                 <div class="flex items-center gap-3">
                   <dt class="w-20 text-xs text-slate-400">Phone</dt>
-                  <dd>
-                    <a
-                      href="tel:8688822733"
-                      class="text-xs font-medium text-slate-200 underline-offset-4 hover:underline"
-                    >
-                      8688822733
-                    </a>
-                  </dd>
+                  <dd><a href="tel:6787940166" class="text-xs font-medium text-slate-200 underline-offset-4 hover:underline">678-794-0166</a></dd>
                 </div>
                 <div class="flex items-center gap-3">
                   <dt class="w-20 text-xs text-slate-400">LinkedIn</dt>
-                  <dd>
-                    <a
-                      href="https://www.linkedin.com/in/syedabdul-aman-genai-developer/"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="text-xs font-medium text-sky-300 underline-offset-4 hover:underline"
-                    >
-                      syedabdul-aman-genai-developer
-                    </a>
-                  </dd>
+                  <dd><a href="https://linkedin.com/in/prabhushankar-ps" target="_blank" rel="noreferrer" class="text-xs font-medium text-sky-300 underline-offset-4 hover:underline">linkedin.com/in/prabhushankar-ps</a></dd>
+                </div>
+                <div class="flex items-center gap-3">
+                  <dt class="w-20 text-xs text-slate-400">GitHub</dt>
+                  <dd><a href="https://github.com/prabhushankar-ps" target="_blank" rel="noreferrer" class="text-xs font-medium text-sky-300 underline-offset-4 hover:underline">github.com/prabhushankar-ps</a></dd>
                 </div>
               </dl>
-
-              <p class="pt-2 text-[11px] text-slate-500">
-                Reach out via email, phone, or LinkedIn, and Ill get back to you as soon as possible.
-              </p>
             </div>
-
-            <!-- Contact form -->
             <div class="rounded-3xl border border-slate-800 bg-slate-950/80 p-5">
               <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Quick message</p>
-              <p class="mt-2 text-xs text-slate-300">
-                This form doesn&apos;t send emails yet, but shows how a real contact flow could feel.
-              </p>
-
-              <form id="contactForm" class="mt-4 space-y-4">
+              <p class="mt-2 text-xs text-slate-300">Send me a note — I'll get back to you soon.</p>
+              <div class="mt-4 space-y-4">
                 <div>
                   <label for="name" class="block text-xs font-medium text-slate-200">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    autocomplete="name"
-                    placeholder="Your name"
-                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                  />
+                  <input type="text" id="name" name="name" placeholder="Your name" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
                 </div>
                 <div>
                   <label for="email" class="block text-xs font-medium text-slate-200">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    autocomplete="email"
-                    placeholder="you@example.com"
-                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                  />
+                  <input type="email" id="email" name="email" placeholder="you@example.com" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
                 </div>
                 <div>
-                  <label for="message" class="block text-xs font-medium text-slate-200">What would you like to work on?</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    placeholder="Briefly describe your project, idea, or question."
-                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                  ></textarea>
+                  <label for="message" class="block text-xs font-medium text-slate-200">Message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="What would you like to work on?" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"></textarea>
                 </div>
-                <button
-                  type="submit"
-                  class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 transition hover:bg-emerald-400"
-                >
-                  Send message
-                </button>
-                <p
-                  id="formStatus"
-                  class="text-[11px] text-emerald-300 opacity-0 transition-opacity duration-200"
-                ></p>
-              </form>
+                <button id="submitBtn" type="button" class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-indigo-500/40 transition hover:bg-indigo-400">Send message</button>
+                <p id="formStatus" class="text-[11px] text-indigo-300 opacity-0 transition-opacity duration-200"></p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-slate-900/80 bg-slate-950 py-6">
       <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-[11px] text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-0">
-        <p>
-          &copy; <span id="year"></span> ꜱʏᴇᴅ ᴀʙᴅᴜʟ ᴀᴍᴀɴ. All rights reserved.
-        </p>
-        <p>Built as a single-page portfolio using HTML, Tailwind CSS, and vanilla JavaScript.</p>
+        <p>&copy; <span id="year"></span> Prabhu Shankar. All rights reserved.</p>
+        <p>Built with HTML, Tailwind CSS, and vanilla JavaScript.</p>
       </div>
     </footer>
   </div>
 
-  <!-- Back to top button -->
-  <button
-    id="toTopBtn"
-    type="button"
-    class="fixed bottom-5 right-5 z-40 inline-flex h-9 w-9 items-center justify-center rounded-full border border-emerald-500/60 bg-emerald-500/10 text-[12px] font-semibold text-emerald-300 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-500/20 hover:text-emerald-50 opacity-0 pointer-events-none"
-    aria-label="Back to top"
-  >
-    ↑
-  </button>
+  <!-- Back to top -->
+  <button id="toTopBtn" type="button" class="fixed bottom-5 right-5 z-40 inline-flex h-9 w-9 items-center justify-center rounded-full border border-indigo-500/60 bg-indigo-500/10 text-[12px] font-semibold text-indigo-300 shadow-lg transition hover:bg-indigo-500/20 hover:text-indigo-50 opacity-0 pointer-events-none" aria-label="Back to top">↑</button>
 
-  <!-- Project detail modal -->
-  <div
-    id="projectModal"
-    class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 px-4 backdrop-blur-sm"
-    aria-hidden="true"
-  >
+  <!-- Project modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 px-4 backdrop-blur-sm" aria-hidden="true">
     <div class="relative w-full max-w-lg rounded-2xl border border-slate-800 bg-slate-950/90 p-5 shadow-xl">
-      <button
-        id="modalClose"
-        type="button"
-        class="absolute right-3 top-3 text-lg text-slate-400 transition hover:text-slate-100"
-        aria-label="Close project details"
-      >
-        &times;
-      </button>
-      <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-400">Project detail</p>
+      <button id="modalClose" type="button" class="absolute right-3 top-3 text-lg text-slate-400 transition hover:text-slate-100" aria-label="Close">&times;</button>
+      <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-indigo-400">Project detail</p>
       <h3 id="modalTitle" class="mt-2 text-lg font-semibold text-slate-50"></h3>
       <p id="modalTagline" class="mt-1 text-xs text-slate-400"></p>
       <p id="modalBody" class="mt-3 text-sm leading-relaxed text-slate-200"></p>
@@ -938,399 +480,167 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Smooth scrolling for selected links
+      // Smooth scrolling
       var scrollLinks = document.querySelectorAll('[data-scroll]');
-      var headerOffset = 80;
-
       scrollLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
           var href = link.getAttribute('href');
           if (!href || href.charAt(0) !== '#') return;
-
-          var targetId = href.slice(1);
-          var target = document.getElementById(targetId);
+          var target = document.getElementById(href.slice(1));
           if (!target) return;
-
           event.preventDefault();
-
-          var targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-
-          if (window.history && window.history.replaceState) {
-            window.history.replaceState(null, '', '#' + targetId);
-          }
-
-          // Close mobile nav if open
-          if (link.closest('#mobileNav')) {
-            var mobileNav = document.getElementById('mobileNav');
-            if (mobileNav) mobileNav.classList.add('hidden');
-          }
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+          if (link.closest('#mobileNav')) document.getElementById('mobileNav').classList.add('hidden');
         });
       });
 
-      // Mobile nav toggle
-      var mobileToggle = document.getElementById('mobileNavToggle');
+      // Mobile nav
+      var toggle = document.getElementById('mobileNavToggle');
       var mobileNav = document.getElementById('mobileNav');
-      if (mobileToggle && mobileNav) {
-        mobileToggle.addEventListener('click', function () {
-          mobileNav.classList.toggle('hidden');
-        });
-      }
+      if (toggle && mobileNav) toggle.addEventListener('click', function () { mobileNav.classList.toggle('hidden'); });
 
-      // Scrollspy for nav links
+      // Scrollspy
       var sections = document.querySelectorAll('[data-section]');
       var navLinks = document.querySelectorAll('[data-nav-link]');
-
-      function updateActiveNav() {
+      function updateNav() {
         var fromTop = window.scrollY + 160;
-        var currentId = '';
-
-        sections.forEach(function (section) {
-          var offsetTop = section.offsetTop;
-          var offsetBottom = offsetTop + section.offsetHeight;
-          if (fromTop >= offsetTop && fromTop < offsetBottom) {
-            currentId = section.id;
-          }
-        });
-
-        if (!currentId) return;
-
-        navLinks.forEach(function (link) {
-          var href = link.getAttribute('href') || '';
-          var hashIndex = href.indexOf('#');
-          if (hashIndex === -1) return;
-          var targetId = href.slice(hashIndex + 1);
-
-          if (targetId === currentId) {
-            link.classList.add('text-emerald-400');
-            link.classList.remove('text-slate-300');
-          } else {
-            link.classList.add('text-slate-300');
-            link.classList.remove('text-emerald-400');
-          }
+        var cur = '';
+        sections.forEach(function (s) { if (fromTop >= s.offsetTop && fromTop < s.offsetTop + s.offsetHeight) cur = s.id; });
+        if (!cur) return;
+        navLinks.forEach(function (l) {
+          var id = (l.getAttribute('href') || '').replace('#', '');
+          l.classList.toggle('text-indigo-400', id === cur);
+          l.classList.toggle('text-slate-300', id !== cur);
         });
       }
+      window.addEventListener('scroll', updateNav);
+      updateNav();
 
-      window.addEventListener('scroll', updateActiveNav);
-      updateActiveNav();
-
-      // Hero role typewriter
+      // Typewriter
       var roleEl = document.getElementById('roleTyping');
       if (roleEl) {
-        var roles = ['Generative AI Developer', 'AI Productivity Builder', 'Data Storyteller'];
-        var roleIndex = 0;
-        var charIndex = 0;
-        var isDeleting = false;
-
-        function typeLoop() {
-          var currentRole = roles[roleIndex];
-
-          if (isDeleting) {
-            charIndex--;
-            if (charIndex < 0) {
-              charIndex = 0;
-            }
-          } else {
-            charIndex++;
-          }
-
-          roleEl.textContent = currentRole.substring(0, charIndex);
-
-          if (!isDeleting && charIndex === currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeLoop, 1100);
-            return;
-          } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(typeLoop, 400);
-            return;
-          }
-
-          var delay = isDeleting ? 45 : 80;
-          setTimeout(typeLoop, delay);
+        var roles = ['Pipeline Architect', 'Cloud Data Engineer', 'Analytics Engineer'];
+        var ri = 0, ci = 0, del = false;
+        function type() {
+          var cur = roles[ri];
+          if (del) { ci--; } else { ci++; }
+          roleEl.textContent = cur.substring(0, ci);
+          if (!del && ci === cur.length) { del = true; setTimeout(type, 1100); return; }
+          if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; setTimeout(type, 400); return; }
+          setTimeout(type, del ? 45 : 80);
         }
-
-        typeLoop();
+        type();
       }
 
-      // Core pillars interactive content
-      var pillarButtons = document.querySelectorAll('[data-pillar]');
-      var pillarTitle = document.getElementById('pillarTitle');
-      var pillarBody = document.getElementById('pillarBody');
-      var pillarList = document.getElementById('pillarList');
-
-      var pillarContent = {
-        data: {
-          title: 'Data',
-          body:
-            'High-level Excel modeling, Python, SQL, and data analytics to explore, clean, and structure data into reliable datasets that answer real questions.',
-          bullets: [
-            'Design Excel and Python models for scenario analysis and forecasting.',
-            'Write SQL for joins, aggregations, and reporting-ready tables.',
-            'Build dashboards that highlight KPIs and trends for stakeholders.',
-          ],
+      // Pillar switcher
+      var pillarData = {
+        pipelines: {
+          title: 'Pipelines',
+          body: 'Designing and optimizing batch and streaming ETL/ELT pipelines using AWS Glue, PySpark, Kafka, Airflow, and dbt — with a focus on performance, reliability, and data quality.',
+          bullets: ['Reduce job runtimes with partitioning, caching, and SARGable SQL.', 'Orchestrate complex DAGs with Airflow and manage SLA compliance.', 'Implement dbt transformations with automated testing and lineage.']
         },
-        ai: {
-          title: 'AI',
-          body:
-            'Generative AI development focused on building reliable assistants, RAG systems, and AI-powered workflows that augment human decision-making.',
-          bullets: [
-            'Engineer prompts for structured, predictable outputs.',
-            'Design RAG pipelines with embeddings and vector databases.',
-            'Integrate LLMs via APIs (OpenAI, Gemini, Llama) into products.',
-          ],
+        cloud: {
+          title: 'Cloud',
+          body: 'Building and deploying data infrastructure on AWS, Snowflake, Databricks, and Azure — from raw ingestion to warehouse serving layers.',
+          bullets: ['Architect lakehouse solutions on Snowflake and Databricks.', 'Use AWS services (Glue, Kinesis, Redshift, S3, Lambda) end-to-end.', 'Manage IaC with Terraform and CI/CD with GitHub Actions.']
         },
+        analytics: {
+          title: 'Analytics',
+          body: 'Turning warehoused data into business-ready insights through dimensional modeling, dashboards, and ML pipelines.',
+          bullets: ['Design star schema models and SCD Type 2 slowly changing dimensions.', 'Deliver Power BI and Tableau dashboards trusted by executives.', 'Build and deploy ML models with Scikit-learn and Spark MLlib.']
+        }
       };
-
-      function setPillar(key) {
-        if (!pillarContent[key]) return;
-        if (pillarTitle) pillarTitle.textContent = pillarContent[key].title;
-        if (pillarBody) pillarBody.textContent = pillarContent[key].body;
-        if (pillarList) {
-          pillarList.innerHTML = '';
-          pillarContent[key].bullets.forEach(function (item) {
-            var li = document.createElement('li');
-            li.textContent = '\u2022 ' + item;
-            li.className = 'text-xs text-slate-300';
-            pillarList.appendChild(li);
-          });
-        }
+      var pillarBtns = document.querySelectorAll('[data-pillar]');
+      var pTitle = document.getElementById('pillarTitle');
+      var pBody = document.getElementById('pillarBody');
+      var pList = document.getElementById('pillarList');
+      function setPillar(k) {
+        var d = pillarData[k]; if (!d) return;
+        pTitle.textContent = d.title; pBody.textContent = d.body;
+        pList.innerHTML = '';
+        d.bullets.forEach(function (b) { var li = document.createElement('li'); li.textContent = '• ' + b; li.className = 'text-xs text-slate-300'; pList.appendChild(li); });
       }
-
-      pillarButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-          var key = button.getAttribute('data-pillar');
-          if (!key) return;
-          setPillar(key);
-
-          pillarButtons.forEach(function (btn) {
-            btn.classList.remove(
-              'border-emerald-500',
-              'bg-emerald-500/10',
-              'text-emerald-300',
-              'shadow-[0_0_0_1px_rgba(16,185,129,0.6)]'
-            );
-            btn.classList.add('border-slate-700', 'text-slate-300');
-          });
-
-          button.classList.remove('border-slate-700', 'text-slate-300');
-          button.classList.add(
-            'border-emerald-500',
-            'bg-emerald-500/10',
-            'text-emerald-300',
-            'shadow-[0_0_0_1px_rgba(16,185,129,0.6)]'
-          );
+      pillarBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setPillar(btn.getAttribute('data-pillar'));
+          pillarBtns.forEach(function (b) { b.classList.remove('border-indigo-500','bg-indigo-500/10','text-indigo-300','shadow-[0_0_0_1px_rgba(99,102,241,0.6)]'); b.classList.add('border-slate-700','text-slate-300'); });
+          btn.classList.remove('border-slate-700','text-slate-300'); btn.classList.add('border-indigo-500','bg-indigo-500/10','text-indigo-300','shadow-[0_0_0_1px_rgba(99,102,241,0.6)]');
         });
       });
+      setPillar('pipelines');
 
-      // Initialize default pillar
-      setPillar('data');
-
-      // Accordion behavior
-      var accordionButtons = document.querySelectorAll('[data-accordion-btn]');
-      accordionButtons.forEach(function (btn) {
+      // Accordion
+      document.querySelectorAll('[data-accordion-btn]').forEach(function (btn) {
         btn.addEventListener('click', function () {
           var content = btn.nextElementSibling;
-          if (!content) return;
           var icon = btn.querySelector('[data-accordion-icon]');
-          var isOpen = !content.classList.contains('hidden');
-
-          if (isOpen) {
-            content.classList.add('hidden');
-            if (icon) icon.classList.remove('rotate-180');
-          } else {
-            content.classList.remove('hidden');
-            if (icon) icon.classList.add('rotate-180');
-          }
+          var open = !content.classList.contains('hidden');
+          content.classList.toggle('hidden', open);
+          if (icon) icon.classList.toggle('rotate-180', !open);
         });
       });
 
       // Project modal
-      var projectButtons = document.querySelectorAll('[data-project-open]');
-      var modal = document.getElementById('projectModal');
-      var modalTitle = document.getElementById('modalTitle');
-      var modalTagline = document.getElementById('modalTagline');
-      var modalBody = document.getElementById('modalBody');
-      var modalBullets = document.getElementById('modalBullets');
-      var modalStack = document.getElementById('modalStack');
-      var modalClose = document.getElementById('modalClose');
-
       var projectData = {
-        resume: {
-          title: 'AI Resume Builder',
-          tagline: 'Generates optimized resumes using AI.',
-          body:
-            'An AI-powered tool that reads your existing resume and target job descriptions, then rewrites bullet points, skills, and summaries to better align with the role while staying ATS-friendly.',
-          bullets: [
-            'Parses resumes and job descriptions to extract key requirements.',
-            'Uses LLMs to rephrase experience with quantified impact.',
-            'Exports clean layouts that can be further customized.',
-          ],
-          stack: 'Tech stack: Python, OpenAI / Gemini APIs, templating, Streamlit / web UI.',
+        wistia: {
+          title: 'Wistia Media Analytics Pipeline',
+          tagline: 'Production medallion ETL pipeline for media analytics.',
+          body: 'A production-grade Bronze → Silver → Gold medallion ETL pipeline that ingests Wistia API data daily, achieving 68% storage reduction via JSON-to-Parquet compression.',
+          bullets: ['Processes ~85,000 records across 350 media objects per run.', 'End-to-end runtime under 1.2 minutes with under 1% failure rate.', 'Airflow-orchestrated retry logic for reliability.'],
+          stack: 'Tech stack: Python, AWS S3, Apache Airflow, Pandas, Parquet.'
         },
-        study: {
-          title: 'AI Study Notes Generator',
-          tagline: 'Converts PDFs into structured notes, flashcards, and quizzes.',
-          body:
-            'Built for students and self-learners, this tool ingests course PDFs and lecture notes, then produces high-quality summaries, flashcards, and quiz questions for spaced repetition.',
-          bullets: [
-            'Extracts and cleans text from PDFs using parsing libraries.',
-            'Generates topic-wise summaries and key takeaways.',
-            'Creates flashcards and quiz questions for active recall.',
-          ],
-          stack: 'Tech stack: Python, PDF parsing, embeddings, LLM APIs, simple web UI.',
+        football: {
+          title: 'Football Stadium Data Pipeline',
+          tagline: 'Containerized ETL into Azure Data Lake for sports analytics.',
+          body: 'Containerized ETL pipeline extracting, cleaning, and storing football stadium data into Azure Data Lake — enabling win-percentage analytics that directly contributed to match outcomes.',
+          bullets: ['Processes 100+ stadium records per run.', 'Reduced manual data collection time by 90%.', 'Analytics outputs helped secure 10–12 additional match wins per season.'],
+          stack: 'Tech stack: Python, Apache Spark, dbt, Azure Data Lake.'
         },
         api: {
-          title: 'API Data Collector',
-          tagline: 'Automates collection and transformation of API data.',
-          body:
-            'A scheduled pipeline that pulls data from multiple APIs, normalizes and combines it, then pushes analytics-ready tables into storage for dashboards and reports.',
-          bullets: [
-            'Handles authentication, rate limits, and pagination.',
-            'Cleans and standardizes heterogeneous API responses.',
-            'Outputs CSV/DB tables used by BI tools and notebooks.',
-          ],
-          stack: 'Tech stack: Python, REST APIs, scheduling, SQLite / cloud storage, visualization tools.',
-        },
-        finance: {
-          title: 'Personal Finance Analyzer',
-          tagline: 'Tracks spending, savings, and financial patterns.',
-          body:
-            'A personal analytics tool that consolidates transactions, categorizes expenses, and highlights trends in savings, investments, and spending habits.',
-          bullets: [
-            'Imports bank exports or spreadsheets into a unified format.',
-            'Categorizes expenses and income with custom rules.',
-            'Surface trends via charts and simple forecast views.',
-          ],
-          stack: 'Tech stack: Excel / Google Sheets, Python, visualization libraries.',
-        },
-        cloud: {
-          title: 'Cloud-Based Model Deployment',
-          tagline: 'Deploys AI models behind accessible APIs.',
-          body:
-            'Takes trained ML or AI models and packages them behind lightweight APIs so other services and dashboards can consume predictions reliably.',
-          bullets: [
-            'Wraps models in FastAPI / Flask endpoints.',
-            'Implements basic input validation and logging.',
-            'Deploys to cloud with environment-based configuration.',
-          ],
-          stack: 'Tech stack: Python, FastAPI / Flask, cloud (AWS / GCP / Azure), containers or serverless.',
-        },
+          title: 'Social Media REST API',
+          tagline: 'High-performance RESTful API with authentication and voting.',
+          body: 'A RESTful API with secure JWT authentication, post CRUD, and a voting system — built for scale and developer ergonomics.',
+          bullets: ['Handles 1,000+ concurrent requests with under 200ms latency.', 'Improved developer onboarding by 50% via automated OpenAPI docs.', 'Modularized routing for maintainability and extensibility.'],
+          stack: 'Tech stack: FastAPI, PostgreSQL, SQLAlchemy, JWT.'
+        }
       };
-
-      function openProjectModal(key) {
-        if (!modal || !projectData[key]) return;
-        var data = projectData[key];
-
-        if (modalTitle) modalTitle.textContent = data.title;
-        if (modalTagline) modalTagline.textContent = data.tagline;
-        if (modalBody) modalBody.textContent = data.body;
-
-        if (modalBullets) {
-          modalBullets.innerHTML = '';
-          data.bullets.forEach(function (item) {
-            var li = document.createElement('li');
-            li.textContent = '\u2022 ' + item;
-            li.className = 'text-xs text-slate-300';
-            modalBullets.appendChild(li);
-          });
-        }
-
-        if (modalStack) modalStack.textContent = data.stack;
-
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.classList.add('overflow-hidden');
-      }
-
-      function closeProjectModal() {
-        if (!modal) return;
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.classList.remove('overflow-hidden');
-      }
-
-      projectButtons.forEach(function (btn) {
+      var modal = document.getElementById('projectModal');
+      var modalClose = document.getElementById('modalClose');
+      document.querySelectorAll('[data-project-open]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          var key = btn.getAttribute('data-project-key');
-          if (!key) return;
-          openProjectModal(key);
+          var d = projectData[btn.getAttribute('data-project-key')]; if (!d) return;
+          document.getElementById('modalTitle').textContent = d.title;
+          document.getElementById('modalTagline').textContent = d.tagline;
+          document.getElementById('modalBody').textContent = d.body;
+          var ul = document.getElementById('modalBullets'); ul.innerHTML = '';
+          d.bullets.forEach(function (b) { var li = document.createElement('li'); li.textContent = '• ' + b; li.className = 'text-xs text-slate-300'; ul.appendChild(li); });
+          document.getElementById('modalStack').textContent = d.stack;
+          modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.classList.add('overflow-hidden');
         });
       });
+      function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.classList.remove('overflow-hidden'); }
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
-      if (modalClose) {
-        modalClose.addEventListener('click', function () {
-          closeProjectModal();
-        });
-      }
-
-      if (modal) {
-        modal.addEventListener('click', function (event) {
-          if (event.target === modal) {
-            closeProjectModal();
-          }
-        });
-      }
-
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-          if (modal && !modal.classList.contains('hidden')) {
-            closeProjectModal();
-          }
-        }
-      });
-
-      // Back to top button
+      // Back to top
       var toTopBtn = document.getElementById('toTopBtn');
-      function updateToTopVisibility() {
-        if (!toTopBtn) return;
-        if (window.scrollY > 400) {
-          toTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-        } else {
-          toTopBtn.classList.add('opacity-0', 'pointer-events-none');
-        }
-      }
-
-      if (toTopBtn) {
-        toTopBtn.addEventListener('click', function () {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-
-      window.addEventListener('scroll', updateToTopVisibility);
-      updateToTopVisibility();
+      window.addEventListener('scroll', function () {
+        toTopBtn.classList.toggle('opacity-0', window.scrollY <= 400);
+        toTopBtn.classList.toggle('pointer-events-none', window.scrollY <= 400);
+      });
+      toTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
       // Contact form (demo)
-      var contactForm = document.getElementById('contactForm');
-      var formStatus = document.getElementById('formStatus');
-      if (contactForm && formStatus) {
-        contactForm.addEventListener('submit', function (event) {
-          event.preventDefault();
-          var nameInput = contactForm.querySelector('input[name="name"]');
-          var name = nameInput && nameInput.value ? nameInput.value.trim() : '';
-          var displayName = name || 'there';
+      document.getElementById('submitBtn').addEventListener('click', function () {
+        var name = document.getElementById('name').value.trim() || 'there';
+        var status = document.getElementById('formStatus');
+        status.textContent = 'Thanks, ' + name + '! Reach me directly at prabhushankargv@gmail.com.';
+        status.classList.remove('opacity-0'); status.classList.add('opacity-100');
+        setTimeout(function () { status.classList.add('opacity-0'); }, 6000);
+      });
 
-          formStatus.textContent =
-            'Thanks, ' +
-            displayName +
-            '! This form does not send emails yet, but you can contact me directly at amanbaba9404522@gmail.com.';
-          formStatus.classList.remove('opacity-0');
-          formStatus.classList.add('opacity-100');
-
-          contactForm.reset();
-
-          setTimeout(function () {
-            formStatus.classList.add('opacity-0');
-          }, 6000);
-        });
-      }
-
-      // Footer year
-      var yearEl = document.getElementById('year');
-      if (yearEl) {
-        yearEl.textContent = String(new Date().getFullYear());
-      }
+      document.getElementById('year').textContent = String(new Date().getFullYear());
     });
   </script>
 </body>
