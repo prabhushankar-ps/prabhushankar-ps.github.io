@@ -632,12 +632,39 @@
       toTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
       // Contact form (demo)
-      document.getElementById('submitBtn').addEventListener('click', function () {
-        var name = document.getElementById('name').value.trim() || 'there';
-        var status = document.getElementById('formStatus');
-        status.textContent = 'Thanks, ' + name + '! Reach me directly at prabhushankargv@gmail.com.';
-        status.classList.remove('opacity-0'); status.classList.add('opacity-100');
-        setTimeout(function () { status.classList.add('opacity-0'); }, 6000);
+      document.getElementById('submitBtn').addEventListener('click', async function () {
+          var name = document.getElementById('name').value.trim() || 'there';
+          var email = document.getElementById('email').value.trim();
+          var message = document.getElementById('message').value.trim();
+          var status = document.getElementById('formStatus');
+      
+          if (!email || !message) {
+              status.textContent = 'Please fill in all fields.';
+              status.classList.remove('opacity-0'); status.classList.add('opacity-100');
+              return;
+          }
+      
+          var btn = document.getElementById('submitBtn');
+          btn.textContent = 'Sending...'; btn.disabled = true;
+      
+          const response = await fetch('https://formspree.io/f/xlgovqde', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, message })
+          });
+      
+          if (response.ok) {
+              status.textContent = 'Thanks, ' + name + '! Your message was sent.';
+              document.getElementById('name').value = '';
+              document.getElementById('email').value = '';
+              document.getElementById('message').value = '';
+          } else {
+              status.textContent = 'Something went wrong. Please try again.';
+          }
+      
+          status.classList.remove('opacity-0'); status.classList.add('opacity-100');
+          btn.textContent = 'Send message'; btn.disabled = false;
+          setTimeout(function () { status.classList.add('opacity-0'); }, 6000);
       });
 
       document.getElementById('year').textContent = String(new Date().getFullYear());
